@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class clickJabon : MonoBehaviour
+public class quitarBurbujas : MonoBehaviour
 {
-    public bool jabon;
     public GameObject prefabBurbujas;
-    private Animator animacionBurbujas;
+
 
     public void MostrarBurbujas()
     {
         GameObject burbujaInstanciada = Instantiate(prefabBurbujas, transform.position, Quaternion.identity);
-        prefabBurbujas.SetActive(true);
+        burbujaInstanciada.SetActive(false); // Deactivate the instantiated bubble
+        Debug.Log("Se deberia de ir");
         
         
     }
