@@ -183,7 +183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shop_1
+      name: Jugador Rojo
       rect:
         serializedVersion: 2
         x: 208
@@ -212,7 +212,7 @@ TextureImporter:
         width: 244
         height: 252
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,8 +235,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Jugador Rojo: 449667984
       Shop_0: -1224845578
-      Shop_1: 449667984
       Tres_en_Raya_0: 1685095024
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
