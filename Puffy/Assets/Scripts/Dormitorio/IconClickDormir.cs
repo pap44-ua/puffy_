@@ -1,20 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class IconClickHandler : MonoBehaviour
+public class IconClickDormir : MonoBehaviour
 {
     public GameObject fondoOscuro;
     public GameObject iconoDormir;
     public GameObject iconoDespierto;
-    public GameObject ojosAbiertos;
     public GameObject ojosCerrados;
+    public GameObject ojosAbiertos;
 
+
+    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    void Update() {
+    // Update is called once per frame
+    void Update()
+    {
 
     }
 
@@ -23,7 +28,8 @@ public class IconClickHandler : MonoBehaviour
         fondoOscuro.SetActive(!fondoOscuro.activeSelf);
         iconoDormir.SetActive(!iconoDormir.activeSelf);
         iconoDespierto.SetActive(!iconoDespierto.activeSelf);
-        ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
         ojosCerrados.SetActive(!ojosCerrados.activeSelf);
+        ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
+
     }
 }
