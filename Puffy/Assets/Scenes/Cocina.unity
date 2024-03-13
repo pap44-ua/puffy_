@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14735590}
   - component: {fileID: 14735589}
+  - component: {fileID: 14735591}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -200,13 +201,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14735588}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27, y: -4.4799, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.27, y: -4.4799, z: 11}
   m_LocalScale: {x: 16.01016, y: 1.306951, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 138445527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14735591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14735588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e32c6e04a71ff4993d8ee915e6a548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 138445526}
+  referenciaTamanyo: 50
 --- !u!1 &68986747
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +398,7 @@ GameObject:
   - component: {fileID: 138445527}
   - component: {fileID: 138445526}
   - component: {fileID: 138445525}
+  - component: {fileID: 138445528}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -461,9 +477,24 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 14735590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138445528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138445524}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e32c6e04a71ff4993d8ee915e6a548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  referenciaTamanyo: 5
 --- !u!1 &318343849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,7 +4180,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 138445527}
   - {fileID: 1846864949}
-  - {fileID: 14735590}
   - {fileID: 1059994197}
   - {fileID: 2045527141}
   - {fileID: 412439466}
