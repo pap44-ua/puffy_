@@ -5,12 +5,20 @@ using UnityEngine;
 public class Cocina : MonoBehaviour
 {
     public GameObject canvasNevera;
-    public GameObject comida;
+    public GameObject hamburguesa;
+    public GameObject pizza;
+    public GameObject sandia;
+    public GameObject croissant;
+    
     // Start is called before the first frame update
     void Start()
     {
         canvasNevera.SetActive(!canvasNevera.activeSelf);
-        comida.SetActive(!comida.activeSelf);
+        hamburguesa.SetActive(!hamburguesa.activeSelf);
+        pizza.SetActive(!pizza.activeSelf);
+        sandia.SetActive(!sandia.activeSelf);
+        croissant.SetActive(!croissant.activeSelf);
+        
     }
 
     // Update is called once per frame
@@ -42,6 +50,27 @@ public class Cocina : MonoBehaviour
                             // Ejecuta la lógica específica para el objeto deseado
                             hit.collider.gameObject.SendMessage("mostrarNevera");
                         }
+                        if (hit.collider.gameObject == hamburguesa)
+                        {
+                            // Ejecuta la lógica específica para el objeto deseado
+                            hamburguesa.SetActive(!hamburguesa.activeSelf);
+                        }
+                        if (hit.collider.gameObject == pizza)
+                        {
+                            // Ejecuta la lógica específica para el objeto deseado
+                            pizza.SetActive(!pizza.activeSelf);
+                        }
+                        if (hit.collider.gameObject == sandia)
+                        {
+                            // Ejecuta la lógica específica para el objeto deseado
+                            sandia.SetActive(!sandia.activeSelf);
+                        }
+                        if (hit.collider.gameObject == croissant)
+                        {
+                            // Ejecuta la lógica específica para el objeto deseado
+                            croissant.SetActive(!croissant.activeSelf);
+                        }
+                        
                     }
                 }
             }
