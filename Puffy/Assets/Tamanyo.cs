@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tamanyo : MonoBehaviour
 {
     public Camera mainCamera;
-    public float referenciaTamanyo = 5f;
+    public float referenciaTamanyo = 20f;
     // Start is called before the first frame update
     void Start()
     {

@@ -10,7 +10,7 @@ public class clickJabon : MonoBehaviour
 
     public void MostrarBurbujas()
     {
-        GameObject burbujaInstanciada = Instantiate(prefabBurbujas, transform.position, Quaternion.identity);
+        //GameObject burbujaInstanciada = Instantiate(prefabBurbujas, transform.position, Quaternion.identity);
         prefabBurbujas.SetActive(true);
         
         
