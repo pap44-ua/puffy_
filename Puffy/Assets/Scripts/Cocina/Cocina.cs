@@ -44,6 +44,7 @@ public class Cocina : MonoBehaviour
                     if (hit.collider != null)
                     {
                         GameObject nevera = GameObject.Find("fridge");
+                        GameObject boca = GameObject.Find("Boca");
 
                         if (hit.collider.gameObject == nevera)
                         {
@@ -54,21 +55,26 @@ public class Cocina : MonoBehaviour
                         {
                             // Ejecuta la lógica específica para el objeto deseado
                             hamburguesa.SetActive(!hamburguesa.activeSelf);
+                            boca.SendMessage("Comiendo");
+
                         }
                         if (hit.collider.gameObject == pizza)
                         {
                             // Ejecuta la lógica específica para el objeto deseado
                             pizza.SetActive(!pizza.activeSelf);
+                            boca.SendMessage("Comiendo");
                         }
                         if (hit.collider.gameObject == sandia)
                         {
                             // Ejecuta la lógica específica para el objeto deseado
                             sandia.SetActive(!sandia.activeSelf);
+                            boca.SendMessage("Comiendo");
                         }
                         if (hit.collider.gameObject == croissant)
                         {
                             // Ejecuta la lógica específica para el objeto deseado
                             croissant.SetActive(!croissant.activeSelf);
+                            boca.SendMessage("Comiendo");
                         }
                         
                     }
