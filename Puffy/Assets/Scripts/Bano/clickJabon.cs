@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class clickJabon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool jabon;
+    public GameObject prefabBurbujas;
+    private Animator animacionBurbujas;
+
+    public void MostrarBurbujas()
     {
+        //GameObject burbujaInstanciada = Instantiate(prefabBurbujas, transform.position, Quaternion.identity);
+        prefabBurbujas.SetActive(true);
+        
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        MostrarBurbujas();
     }
 }
