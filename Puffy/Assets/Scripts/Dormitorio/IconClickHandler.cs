@@ -3,29 +3,27 @@ using UnityEngine.UI;
 
 public class IconClickHandler : MonoBehaviour
 {
-    public Sprite normalSprite; // Sprite del fondo normal
-    public Sprite squareSprite; // Sprite del Square
-    private bool isNormal = true; // Variable para controlar el estado actual
-    private Image backgroundImage; // Referencia al componente Image del elemento de interfaz de usuario
+    public GameObject fondoOscuro;
+    public GameObject iconoDormir;
+    public GameObject iconoDespierto;
+    public GameObject ojosAbiertos;
+    public GameObject ojosCerrados;
 
     void Start()
     {
-        backgroundImage = GetComponent<Image>(); // Obtener el componente Image
+        
     }
 
-    public void OnIconClick()
+    void Update() {
+
+    }
+
+    public void OnMouseDown()
     {
-        if (isNormal)
-        {
-            // Cambiar el sprite al Square y actualizar el estado
-            backgroundImage.sprite = squareSprite;
-            isNormal = false;
-        }
-        else
-        {
-            // Cambiar el sprite al fondo normal y actualizar el estado
-            backgroundImage.sprite = normalSprite;
-            isNormal = true;
-        }
+        fondoOscuro.SetActive(!fondoOscuro.activeSelf);
+        iconoDormir.SetActive(!iconoDormir.activeSelf);
+        iconoDespierto.SetActive(!iconoDespierto.activeSelf);
+        ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
+        ojosCerrados.SetActive(!ojosCerrados.activeSelf);
     }
 }
