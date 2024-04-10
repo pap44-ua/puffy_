@@ -4,12 +4,12 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
-public class AbrirArmario : MonoBehaviour
+public class ButtonClickHandlerArmario : MonoBehaviour
 {
     public GameObject canvasArmario;
-    public void OnClick()
+    public void OnMouseDown()
     {
-        canvasArmario.SetActive(!canvasArmario.activeSelf);
+        canvasArmario.SetActive(false);
         
     }
     // Start is called before the first frame update
