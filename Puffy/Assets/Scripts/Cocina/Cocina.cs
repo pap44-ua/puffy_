@@ -9,6 +9,14 @@ public class Cocina : MonoBehaviour
     public GameObject pizza;
     public GameObject sandia;
     public GameObject croissant;
+    public GameObject fresa;
+    public GameObject cerezas;
+    public GameObject helado;
+    public GameObject galleta;
+    public GameObject banana;
+    public GameObject manzana;
+    public GameObject tortitas;
+    public GameObject perrito;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +26,14 @@ public class Cocina : MonoBehaviour
         pizza.SetActive(!pizza.activeSelf);
         sandia.SetActive(!sandia.activeSelf);
         croissant.SetActive(!croissant.activeSelf);
+        fresa.SetActive(!fresa.activeSelf);
+        cerezas.SetActive(!cerezas.activeSelf);
+        helado.SetActive(!helado.activeSelf);
+        galleta.SetActive(!galleta.activeSelf);
+        banana.SetActive(!banana.activeSelf);
+        manzana.SetActive(!manzana.activeSelf);
+        tortitas.SetActive(!tortitas.activeSelf);
+        perrito.SetActive(!perrito.activeSelf);
         
     }
 
@@ -44,31 +60,72 @@ public class Cocina : MonoBehaviour
                     if (hit.collider != null)
                     {
                         GameObject nevera = GameObject.Find("fridge");
+                        GameObject boca = GameObject.Find("Boca");
 
                         if (hit.collider.gameObject == nevera)
                         {
-                            // Ejecuta la lógica específica para el objeto deseado
                             hit.collider.gameObject.SendMessage("mostrarNevera");
                         }
                         if (hit.collider.gameObject == hamburguesa)
                         {
-                            // Ejecuta la lógica específica para el objeto deseado
                             hamburguesa.SetActive(!hamburguesa.activeSelf);
+                            boca.SendMessage("Comiendo");
+
                         }
                         if (hit.collider.gameObject == pizza)
                         {
-                            // Ejecuta la lógica específica para el objeto deseado
                             pizza.SetActive(!pizza.activeSelf);
+                            boca.SendMessage("Comiendo");
                         }
                         if (hit.collider.gameObject == sandia)
                         {
-                            // Ejecuta la lógica específica para el objeto deseado
                             sandia.SetActive(!sandia.activeSelf);
+                            boca.SendMessage("Comiendo");
                         }
                         if (hit.collider.gameObject == croissant)
                         {
-                            // Ejecuta la lógica específica para el objeto deseado
                             croissant.SetActive(!croissant.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == fresa)
+                        {
+                            fresa.SetActive(!fresa.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == cerezas)
+                        {
+                            cerezas.SetActive(!cerezas.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == helado)
+                        {
+                            helado.SetActive(!helado.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == galleta)
+                        {
+                            galleta.SetActive(!galleta.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == banana)
+                        {
+                            banana.SetActive(!banana.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == manzana)
+                        {
+                            manzana.SetActive(!manzana.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == tortitas)
+                        {
+                            tortitas.SetActive(!tortitas.activeSelf);
+                            boca.SendMessage("Comiendo");
+                        }
+                        if (hit.collider.gameObject == perrito)
+                        {
+                            perrito.SetActive(!perrito.activeSelf);
+                            boca.SendMessage("Comiendo");
                         }
                         
                     }
