@@ -22,10 +22,10 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
 
         //linearIndicator.SetOrientation(LinearIndicator.Orientation.Horizontal);
         //linearIndicator.reverse = false;
-        linearIndicator.SetValue(currentValue);
-        linearIndicator2.SetValue(currentValue);
-        linearIndicator3.SetValue(currentValue);
-        linearIndicator4.SetValue(currentValue);
+        linearIndicator.SetValue(50);
+        linearIndicator2.SetValue(75);
+        linearIndicator3.SetValue(25);
+        linearIndicator4.SetValue(100);
 
     }
 

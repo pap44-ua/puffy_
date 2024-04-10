@@ -1578,7 +1578,7 @@ MonoBehaviour:
   orientation: 1
   reverse: 0
   fillColor: {r: 0.42860293, g: 1, b: 0, a: 1}
-  useTwoColors: 0
+  useTwoColors: 1
   emptyColor: {r: 1, g: 0, b: 0, a: 1}
   minValue: 0
   maxValue: 100
@@ -1634,6 +1634,7 @@ GameObject:
   - component: {fileID: 712953074}
   - component: {fileID: 712953073}
   - component: {fileID: 712953077}
+  - component: {fileID: 712953078}
   m_Layer: 5
   m_Name: Barras
   m_TagString: Untagged
@@ -1741,6 +1742,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   referenciaTamanyo: 5
+--- !u!114 &712953078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712953072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffd9cad22f85af43a05353f915a4178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linearIndicator: {fileID: 1864111135}
+  linearIndicator2: {fileID: 1741602067}
+  linearIndicator3: {fileID: 693299283}
+  linearIndicator4: {fileID: 1848264954}
+  minValue: 0
+  maxValue: 0
+  currentValue: 0
 --- !u!1 &721756340
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,7 +4319,7 @@ MonoBehaviour:
   orientation: 1
   reverse: 0
   fillColor: {r: 0.42860293, g: 1, b: 0, a: 1}
-  useTwoColors: 0
+  useTwoColors: 1
   emptyColor: {r: 1, g: 0, b: 0, a: 1}
   minValue: 0
   maxValue: 100
@@ -4606,7 +4626,7 @@ MonoBehaviour:
   orientation: 1
   reverse: 0
   fillColor: {r: 0.42860293, g: 1, b: 0, a: 1}
-  useTwoColors: 0
+  useTwoColors: 1
   emptyColor: {r: 1, g: 0, b: 0, a: 1}
   minValue: 0
   maxValue: 100
@@ -4703,7 +4723,7 @@ MonoBehaviour:
   orientation: 1
   reverse: 0
   fillColor: {r: 0.42860293, g: 1, b: 0, a: 1}
-  useTwoColors: 0
+  useTwoColors: 1
   emptyColor: {r: 1, g: 0, b: 0, a: 1}
   minValue: 0
   maxValue: 100
