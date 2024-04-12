@@ -4,6 +4,7 @@ public class beber : MonoBehaviour
 {
     public GameObject moneda;
     private Animator monedaAnimator;
+    public GameObject bocabuena;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class beber : MonoBehaviour
 
     public void OnMouseDown()
     {
+        bocabuena.SetActive(false);
         // Activa la moneda
         moneda.SetActive(true);
 
@@ -34,6 +36,7 @@ public class beber : MonoBehaviour
     // Método para desactivar la moneda
     private void DesactivarMoneda()
     {
+        bocabuena.SetActive(true);
         moneda.SetActive(false);
     }
 
