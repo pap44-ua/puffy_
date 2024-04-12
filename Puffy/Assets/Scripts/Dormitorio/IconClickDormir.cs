@@ -9,6 +9,8 @@ public class IconClickDormir : MonoBehaviour
     public GameObject iconoDespierto;
     public GameObject ojosCerrados;
     public GameObject ojosAbiertos;
+    public GameObject zzz;
+    
 
 
     // Start is called before the first frame update
@@ -30,6 +32,8 @@ public class IconClickDormir : MonoBehaviour
         iconoDespierto.SetActive(!iconoDespierto.activeSelf);
         ojosCerrados.SetActive(!ojosCerrados.activeSelf);
         ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
+        zzz.SetActive(!zzz.activeSelf);
+
 
     }
 }
