@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tamanyo : MonoBehaviour
+public class tamanyo : MonoBehaviour
 {
     public Camera mainCamera;
     public float referenciaTamanyo = 20f;
@@ -17,9 +17,5 @@ public class Tamanyo : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
