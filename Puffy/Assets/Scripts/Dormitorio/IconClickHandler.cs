@@ -8,6 +8,7 @@ public class IconClickHandler : MonoBehaviour
     public GameObject iconoDespierto;
     public GameObject ojosAbiertos;
     public GameObject ojosCerrados;
+    public GameObject zzz;
 
     void Start()
     {
@@ -25,5 +26,7 @@ public class IconClickHandler : MonoBehaviour
         iconoDespierto.SetActive(!iconoDespierto.activeSelf);
         ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
         ojosCerrados.SetActive(!ojosCerrados.activeSelf);
+        zzz.SetActive(!zzz.activeSelf);
+
     }
 }
