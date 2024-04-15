@@ -15,6 +15,14 @@ public class PPTMainMenu : MonoBehaviour
     public GameObject tijerasImage;
     public GameObject papelImage;
     public GameObject piedraImage;
+    public GameObject tijerasImage1;
+    public GameObject papelImage1;
+    public GameObject piedraImage1;
+    public GameObject victoria;
+    public GameObject derrota;
+    public GameObject empate;
+    public GameObject volverButton;
+    public GameObject jugarButton;
 
     void Start()
     {
@@ -26,19 +34,13 @@ public class PPTMainMenu : MonoBehaviour
         tijerasImage.SetActive(false);
         papelImage.SetActive(false);
         piedraImage.SetActive(false);
-    }
-
-    public void OnPlayButtonClick()
-    {
-        Debug.Log("Botón Play presionado");
-        // Desactiva los elementos existentes
-        playButton.SetActive(false);
-        jugamosText.SetActive(false);
-
-        // Activa los nuevos elementos
-        eligeText.SetActive(true);
-        piedraButton.SetActive(true);
-        papelButton.SetActive(true);
-        tijerasButton.SetActive(true);
+        tijerasImage1.SetActive(false);
+        papelImage1.SetActive(false);
+        piedraImage1.SetActive(false);
+        victoria.SetActive(false);
+        derrota.SetActive(false);
+        empate.SetActive(false);
+        volverButton.SetActive(false);
+        jugarButton.SetActive(false);
     }
 }
