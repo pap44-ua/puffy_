@@ -21,6 +21,8 @@ public class PPTMainMenu : MonoBehaviour
     public GameObject victoria;
     public GameObject derrota;
     public GameObject empate;
+    public GameObject volverButton;
+    public GameObject jugarButton;
 
     void Start()
     {
@@ -38,5 +40,7 @@ public class PPTMainMenu : MonoBehaviour
         victoria.SetActive(false);
         derrota.SetActive(false);
         empate.SetActive(false);
+        volverButton.SetActive(false);
+        jugarButton.SetActive(false);
     }
 }

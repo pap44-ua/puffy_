@@ -18,16 +18,40 @@ public class ElementoScript : MonoBehaviour
     public GameObject victoria;
     public GameObject derrota;
     public GameObject empate;
+    public GameObject jugarButton;
+    public GameObject volverButton;
+
 
     void OnMouseDown()
     {
+        if(gameObject == jugarButton){
+            victoria.SetActive(false);
+            derrota.SetActive(false);
+            empate.SetActive(false);
+            jugarButton.SetActive(false);
+            volverButton.SetActive(false);
+            piedraImage.SetActive(false);
+            papelImage.SetActive(false);
+            tijerasImage.SetActive(false);
+            piedraImage1.SetActive(false);
+            papelImage1.SetActive(false);
+            tijerasImage1.SetActive(false);
+            vsText.SetActive(false);
+            eligeText.SetActive(true);
+            piedraButton.SetActive(true);
+            papelButton.SetActive(true);
+            tijerasButton.SetActive(true);
         
-        StartCoroutine(ProcesoJuego());
+        }
+        else{
+            StartCoroutine(ProcesoJuego());
 
-        eligeText.SetActive(false);
-        piedraButton.SetActive(false);
-        papelButton.SetActive(false);
-        tijerasButton.SetActive(false);
+            eligeText.SetActive(false);
+            piedraButton.SetActive(false);
+            papelButton.SetActive(false);
+            tijerasButton.SetActive(false);
+        }
+        
 
         
     }
@@ -40,14 +64,12 @@ public class ElementoScript : MonoBehaviour
         // Mostrar el texto vs
         vsText.SetActive(true);
 
-        // Espera 3 segundos
-        yield return new WaitForSeconds(1);
-
         SeleccionMaquina();
 
         DeterminarResultado();
 
-        OcultarObjetosAlTocarPantalla();
+        jugarButton.SetActive(true);
+        volverButton.SetActive(true);
 
         yield return null;
     }
@@ -113,23 +135,5 @@ public class ElementoScript : MonoBehaviour
             empate.SetActive(true);
         }
     }
-    void OcultarObjetosAlTocarPantalla()
-    {
-        
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Debug.Log("OcultarObjetosAlTocarPantalla");
-            // Oculta todos los objetos
-            vsText.SetActive(false);
-            tijerasImage.SetActive(false);
-            piedraImage.SetActive(false);
-            papelImage.SetActive(false);
-            tijerasImage1.SetActive(false);
-            piedraImage1.SetActive(false);
-            papelImage1.SetActive(false);
-            victoria.SetActive(false);
-            derrota.SetActive(false);
-            empate.SetActive(false);
-        }
-    }
+    
 }
