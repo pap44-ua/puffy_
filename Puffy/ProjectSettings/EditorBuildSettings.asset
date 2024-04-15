@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Games/PPT_MainMenu.unity
     guid: c7d65f69401a45349b9bab95c3197acb
+  - enabled: 1
+    path: Assets/Scenes/Games/Ahorcado.unity
+    guid: 4cfb0b38a02334977a9d0b3f65103c65
+  - enabled: 1
+    path: Assets/Scenes/Games/Tres_en_raya.unity
+    guid: 1c5cef50d23f57a4198955539a641062
   m_configObjects: {}
