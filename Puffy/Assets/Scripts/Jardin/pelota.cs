@@ -6,6 +6,8 @@ public class pelota : MonoBehaviour
 
     // Velocidad del balón
     public float speed = 10f;
+    // Factor de amortiguación
+    public float dampingFactor = 0.9f;
 
     void Start()
     {
@@ -41,8 +43,12 @@ public class pelota : MonoBehaviour
             Vector2 normal = collision.contacts[0].normal;
             Vector2 direction = Vector2.Reflect(rb.velocity, normal).normalized;
 
-            // Aplica la nueva dirección de movimiento al balón
-            rb.velocity = direction * speed;
+            // Para rebote con 45 grados, dividimos la dirección en dos y los rotamos 45 grados
+            Vector2 rotatedDirection = Quaternion.Euler(0, 0, 45) * direction;
+
+            // Aplica la nueva dirección de movimiento al balón y reduce la velocidad
+            rb.velocity = rotatedDirection * speed;
+            speed *= dampingFactor; // Reducción de velocidad
         }
         if (collision.gameObject.CompareTag("Porteria"))
         {
