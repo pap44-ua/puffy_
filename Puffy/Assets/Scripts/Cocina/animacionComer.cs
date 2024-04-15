@@ -5,12 +5,14 @@ using UnityEngine;
 public class animacionComer : MonoBehaviour
 {
     public AudioSource audioSource;
+    public LinearIndicator comida;
     // Start is called before the first frame update
     void Start()
     {
         
     }
     public IEnumerator Comiendo(){
+        comida.SetValue(comida.GetValue()+25);
         gameObject.GetComponent<Animator>().SetBool("comiendo",true);
          if (audioSource != null)
         {
