@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro; // Import TMPro namespace
 
 public class ContadorMonedasScript : MonoBehaviour
-{
+{/**
     public int monedasRecogidas; // Variable to store collected coins
     public TMP_Text textoMonedas; // Reference to the TextMeshPro counter object
 
@@ -30,5 +30,5 @@ public class ContadorMonedasScript : MonoBehaviour
         {
             IncrementarMonedas();
         }
-    }
+    }**/
 }
