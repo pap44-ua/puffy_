@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class ElementoScript : MonoBehaviour
 {
     public GameObject eligeText;
@@ -42,6 +44,9 @@ public class ElementoScript : MonoBehaviour
             papelButton.SetActive(true);
             tijerasButton.SetActive(true);
         
+        }
+        else if(gameObject == volverButton){
+            SceneManager.LoadScene("Jardin");
         }
         else{
             StartCoroutine(ProcesoJuego());

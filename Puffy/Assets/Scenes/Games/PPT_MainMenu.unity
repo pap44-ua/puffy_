@@ -637,6 +637,8 @@ GameObject:
   m_Component:
   - component: {fileID: 823180167}
   - component: {fileID: 823180166}
+  - component: {fileID: 823180169}
+  - component: {fileID: 823180168}
   m_Layer: 0
   m_Name: atrasButton
   m_TagString: Untagged
@@ -711,6 +713,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &823180168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823180165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.047356248, y: -0.03157091}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.1475916, y: 2.0954957}
+  m_EdgeRadius: 0
+--- !u!114 &823180169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823180165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0165eb3ba9d06848a14707c5ff03e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eligeText: {fileID: 2113041351}
+  papelButton: {fileID: 1985970517}
+  tijerasButton: {fileID: 906353207}
+  piedraButton: {fileID: 1732639544}
+  vsText: {fileID: 822938116}
+  tijerasImage: {fileID: 686479620}
+  piedraImage: {fileID: 1333780466}
+  papelImage: {fileID: 220157633}
+  tijerasImage1: {fileID: 1842632770}
+  piedraImage1: {fileID: 563421135}
+  papelImage1: {fileID: 997207126}
+  victoria: {fileID: 1907261690}
+  derrota: {fileID: 667472489}
+  empate: {fileID: 1643497366}
+  jugarButton: {fileID: 1195226545}
+  volverButton: {fileID: 823180165}
 --- !u!1 &906353207
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +904,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.5686145, y: 0.2653532}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -840,7 +915,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.48, y: 20.48}
+  m_Size: {x: 12.51941, y: 16.765059}
   m_EdgeRadius: 0
 --- !u!114 &906353213
 MonoBehaviour:
