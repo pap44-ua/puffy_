@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 public class LinearIndicator : MonoBehaviour
 {
+    public float value;
     public enum Orientation
     {
         Horizontal,
@@ -88,6 +90,9 @@ public class LinearIndicator : MonoBehaviour
 
         }
 
+    }
+    public float GetValue(){
+        return this.currentValue;
     }
 
 }

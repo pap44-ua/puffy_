@@ -5,8 +5,7 @@ using UnityEngine;
 public class ExampleScriptLinearIndicator : MonoBehaviour
 {
 
-    public LinearIndicator linearIndicator;
-    public LinearIndicator linearIndicator2, linearIndicator3, linearIndicator4;
+    public LinearIndicator comida, energia, salud, diversion;
 
     public float minValue, maxValue;
     public float currentValue;
@@ -14,18 +13,18 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
     void Start()
     {
         //Setup the linear indicator by code or do it in inspector
-        linearIndicator.SetupIndicator(0,100);
-        linearIndicator2.SetupIndicator(0, 100);
-        linearIndicator3.SetupIndicator(0, 100);
-        linearIndicator4.SetupIndicator(0, 100);
+        comida.SetupIndicator(0,100);
+        energia.SetupIndicator(0, 100);
+        salud.SetupIndicator(0, 100);
+        diversion.SetupIndicator(0, 100);
 
 
         //linearIndicator.SetOrientation(LinearIndicator.Orientation.Horizontal);
         //linearIndicator.reverse = false;
-        linearIndicator.SetValue(50);
-        linearIndicator2.SetValue(75);
-        linearIndicator3.SetValue(25);
-        linearIndicator4.SetValue(100);
+        comida.SetValue(50);
+        diversion.SetValue(75);
+        energia.SetValue(25);
+        salud.SetValue(100);
 
     }
 
