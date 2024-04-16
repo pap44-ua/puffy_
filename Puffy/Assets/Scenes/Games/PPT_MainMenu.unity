@@ -1641,8 +1641,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1655701544}
   - component: {fileID: 1655701543}
-  - component: {fileID: 1655701546}
   - component: {fileID: 1655701547}
+  - component: {fileID: 1655701548}
   m_Layer: 0
   m_Name: playButton
   m_TagString: Untagged
@@ -1717,8 +1717,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1655701546
-BoxCollider2D:
+--- !u!114 &1655701547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655701541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f8c6248c98a640bac229ec2e643a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playButton: {fileID: 1655701541}
+  jugamosText: {fileID: 285525309}
+  eligeText: {fileID: 2113041351}
+  papelButton: {fileID: 1985970517}
+  tijerasButton: {fileID: 906353207}
+  piedraButton: {fileID: 1732639544}
+  vsText: {fileID: 822938116}
+  tijerasImage: {fileID: 686479620}
+--- !u!58 &1655701548
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1749,39 +1769,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 5, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.0046612024, y: 0}
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
-  m_EdgeRadius: 0
---- !u!114 &1655701547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1655701541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726f8c6248c98a640bac229ec2e643a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playButton: {fileID: 1655701541}
-  jugamosText: {fileID: 285525309}
-  eligeText: {fileID: 2113041351}
-  papelButton: {fileID: 1985970517}
-  tijerasButton: {fileID: 906353207}
-  piedraButton: {fileID: 1732639544}
-  vsText: {fileID: 822938116}
-  tijerasImage: {fileID: 686479620}
+  m_Radius: 1.5258073
 --- !u!1 &1732639544
 GameObject:
   m_ObjectHideFlags: 0
