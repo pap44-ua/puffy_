@@ -605,6 +605,14 @@ MonoBehaviour:
   pizza: {fileID: 1492924552}
   sandia: {fileID: 328548732}
   croissant: {fileID: 1889208795}
+  fresa: {fileID: 0}
+  cerezas: {fileID: 0}
+  helado: {fileID: 0}
+  galleta: {fileID: 0}
+  banana: {fileID: 0}
+  manzana: {fileID: 0}
+  tortitas: {fileID: 0}
+  perrito: {fileID: 0}
 --- !u!4 &318343851
 Transform:
   m_ObjectHideFlags: 0
@@ -3543,7 +3551,7 @@ MonoBehaviour:
   m_text: "Atr\xE1s"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 42df1c7856584b6b8db9a509b6b10074, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
