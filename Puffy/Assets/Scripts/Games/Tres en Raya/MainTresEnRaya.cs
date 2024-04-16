@@ -272,4 +272,48 @@ public class NewBehaviourScript : MonoBehaviour
         }
         comprobarGanador();
     }
+
+    public void volverAJugar()
+    {
+        turno = 1;
+        ganador = 0;
+
+        BotonJugar.SetActive(false);
+        BotonSalir.SetActive(false);
+        FinJuego.SetActive(false);
+        Jugador1.SetActive(false);
+        Jugador2.SetActive(false);
+        MensajeGanador.SetActive(false);
+
+        Boton00.SetActive(true);
+        Boton01.SetActive(true);
+        Boton02.SetActive(true);
+        Boton10.SetActive(true);
+        Boton11.SetActive(true);
+        Boton12.SetActive(true);
+        Boton20.SetActive(true);
+        Boton21.SetActive(true);
+        Boton22.SetActive(true);
+
+
+        Jugador1_00.SetActive(false);
+        Jugador1_01.SetActive(false);
+        Jugador1_02.SetActive(false);
+        Jugador1_10.SetActive(false);
+        Jugador1_11.SetActive(false);
+        Jugador1_12.SetActive(false);
+        Jugador1_20.SetActive(false);
+        Jugador1_21.SetActive(false);
+        Jugador1_22.SetActive(false);
+
+        Jugador2_00.SetActive(false);
+        Jugador2_01.SetActive(false);
+        Jugador2_02.SetActive(false);
+        Jugador2_10.SetActive(false);
+        Jugador2_11.SetActive(false);
+        Jugador2_12.SetActive(false);
+        Jugador2_20.SetActive(false);
+        Jugador2_21.SetActive(false);
+        Jugador2_22.SetActive(false);
+    }
 }
