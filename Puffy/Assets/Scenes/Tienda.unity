@@ -402,6 +402,8 @@ GameObject:
   - component: {fileID: 173851266}
   - component: {fileID: 173851268}
   - component: {fileID: 173851267}
+  - component: {fileID: 173851269}
+  - component: {fileID: 173851270}
   m_Layer: 0
   m_Name: cantidad
   m_TagString: Untagged
@@ -425,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.74, y: -2.42}
+  m_AnchoredPosition: {x: 6.4, y: -2.42}
   m_SizeDelta: {x: 7.052, y: 4.1157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173851267
@@ -562,6 +564,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &173851269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173851265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d4a157244ca124c910802b8520509a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsText: {fileID: 173851267}
+  coins: 500
+--- !u!114 &173851270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173851265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dccc453eff5772439c0e3135d4a20a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  comidaCost: 50
 --- !u!1 &195611522
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,8 +891,8 @@ Transform:
   m_GameObject: {fileID: 256123490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.27, y: 1.72, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalPosition: {x: 1.62, y: 1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1888282234}
@@ -1074,6 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  comidaCost: 2
 --- !u!1 &271869046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1116,6 @@ GameObject:
   - component: {fileID: 271869047}
   - component: {fileID: 271869050}
   - component: {fileID: 271869049}
-  - component: {fileID: 271869048}
   m_Layer: 0
   m_Name: chaqueta_gris
   m_TagString: Untagged
@@ -1102,29 +1132,13 @@ Transform:
   m_GameObject: {fileID: 271869046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -1.1, z: 0}
-  m_LocalScale: {x: 0.07640498, y: 0.10394995, z: 1}
+  m_LocalPosition: {x: 0.23, y: -0.63, z: 0}
+  m_LocalScale: {x: 0.063775234, y: 0.08917867, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1469599807}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &271869048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271869046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &271869049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1327,8 +1341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0566, y: -0.41}
-  m_SizeDelta: {x: 15.2711, y: 11.0135}
+  m_AnchoredPosition: {x: 0.3822, y: -0.9079}
+  m_SizeDelta: {x: 9.8254, y: 8.9377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282710859
 MonoBehaviour:
@@ -1861,7 +1875,7 @@ Transform:
   m_GameObject: {fileID: 312600459}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.64, y: 3.66, z: 0}
+  m_LocalPosition: {x: 0.94, y: 3.61, z: 0}
   m_LocalScale: {x: 0.6301707, y: 0.72816867, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1904,7 +1918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.63, y: 3.54}
+  m_AnchoredPosition: {x: 1.38, y: 3.68}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &345281300
@@ -2459,7 +2473,6 @@ GameObject:
   - component: {fileID: 452066961}
   - component: {fileID: 452066964}
   - component: {fileID: 452066963}
-  - component: {fileID: 452066962}
   m_Layer: 0
   m_Name: tatuaje
   m_TagString: Untagged
@@ -2476,29 +2489,13 @@ Transform:
   m_GameObject: {fileID: 452066960}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.56, y: -3.91, z: 0}
-  m_LocalScale: {x: 0.2961, y: 0.28754, z: 1}
+  m_LocalPosition: {x: 1.3651904, y: -3.0408034, z: 0}
+  m_LocalScale: {x: 0.24715465, y: 0.24668056, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 225029738}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &452066962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452066960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &452066963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2627,8 +2624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e32c6e04a71ff4993d8ee915e6a548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  referenciaTamanyo: 5
 --- !u!81 &461752480
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2697,8 +2692,8 @@ Transform:
   m_GameObject: {fileID: 461752478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7527, y: -0.4115, z: -10}
-  m_LocalScale: {x: 0.6301707, y: 0.72816867, z: 1}
+  m_LocalPosition: {x: 0.82771134, y: -0.177822, z: -10}
+  m_LocalScale: {x: 0.5260035, y: 0.6246959, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3037,8 +3032,8 @@ Transform:
   m_GameObject: {fileID: 630130277}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.17, y: -1.89, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalPosition: {x: 1.52, y: -1.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1546690515}
@@ -3154,6 +3149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  comidaCost: 4
 --- !u!82 &630130282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3279,8 +3275,8 @@ Transform:
   m_GameObject: {fileID: 748662461}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.58, y: 1.77, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalPosition: {x: -0.82, y: 1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 571537979}
@@ -3492,6 +3488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  comidaCost: 1
 --- !u!1 &797934580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,8 +3567,8 @@ Transform:
   m_GameObject: {fileID: 797934580}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: 2.52, z: 0}
-  m_LocalScale: {x: 0.6301707, y: 0.72816867, z: 1}
+  m_LocalPosition: {x: -0.54, y: 2.66, z: 0}
+  m_LocalScale: {x: 0.5260035, y: 0.6246959, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 173851266}
@@ -3660,7 +3657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.63, y: 4.33}
+  m_AnchoredPosition: {x: 1.73, y: 3.41}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812493429
@@ -4195,7 +4192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &937037337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4276,8 +4273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.3, y: -0.1}
-  m_SizeDelta: {x: 15.2711, y: 11.0135}
+  m_AnchoredPosition: {x: 0.67, y: -1.1}
+  m_SizeDelta: {x: 13.0211, y: 9.2635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &937037340
 MonoBehaviour:
@@ -4307,7 +4304,6 @@ GameObject:
   - component: {fileID: 1001728289}
   - component: {fileID: 1001728292}
   - component: {fileID: 1001728291}
-  - component: {fileID: 1001728290}
   m_Layer: 0
   m_Name: pulsera
   m_TagString: Untagged
@@ -4324,29 +4320,13 @@ Transform:
   m_GameObject: {fileID: 1001728288}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.63, y: -2.74, z: 0}
-  m_LocalScale: {x: 0.38593, y: 0.36969998, z: 1}
+  m_LocalPosition: {x: 1.4236195, y: -2.0370169, z: 0}
+  m_LocalScale: {x: 0.32213578, y: 0.3171656, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1559774826}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1001728290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001728288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1001728291
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4455,7 +4435,6 @@ GameObject:
   - component: {fileID: 1007786716}
   - component: {fileID: 1007786719}
   - component: {fileID: 1007786718}
-  - component: {fileID: 1007786717}
   m_Layer: 0
   m_Name: sudadera_adidas
   m_TagString: Untagged
@@ -4472,29 +4451,13 @@ Transform:
   m_GameObject: {fileID: 1007786715}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.32, y: 1.95, z: 0}
-  m_LocalScale: {x: 0.084864, y: 0.0841687, z: 1}
+  m_LocalPosition: {x: -1.0387424, y: 1.9867078, z: 0}
+  m_LocalScale: {x: 0.07083598, y: 0.07220833, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1484635895}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1007786717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007786715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1007786718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4603,7 +4566,6 @@ GameObject:
   - component: {fileID: 1154111437}
   - component: {fileID: 1154111440}
   - component: {fileID: 1154111439}
-  - component: {fileID: 1154111438}
   m_Layer: 0
   m_Name: PocionDiversion
   m_TagString: Untagged
@@ -4628,22 +4590,6 @@ Transform:
   - {fileID: 312118886}
   m_Father: {fileID: 1246787463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1154111438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154111436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 2
-  texto: {fileID: 312118887}
-  canvas: {fileID: 1246787457}
-  pocion: {fileID: 0}
 --- !u!61 &1154111439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4751,7 +4697,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1217255392}
   - component: {fileID: 1217255395}
-  - component: {fileID: 1217255394}
   - component: {fileID: 1217255393}
   m_Layer: 0
   m_Name: sudadera_nike
@@ -4769,8 +4714,8 @@ Transform:
   m_GameObject: {fileID: 1217255391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 1.89, z: 0}
-  m_LocalScale: {x: 0.0816282, y: 0.07290624, z: 1}
+  m_LocalPosition: {x: 0.25504112, y: 1.9352314, z: 0}
+  m_LocalScale: {x: 0.06813506, y: 0.06254627, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1589866671}
@@ -4821,22 +4766,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.211853, y: 8.766189}
   m_EdgeRadius: 0
---- !u!114 &1217255394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217255391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!212 &1217255395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5080,7 +5009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1246787458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5191,7 +5120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0566, y: 0.3782}
+  m_AnchoredPosition: {x: 0.67, y: -1.25}
   m_SizeDelta: {x: 15.2711, y: 11.0135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1343887334
@@ -5204,7 +5133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1343887335}
   - component: {fileID: 1343887338}
-  - component: {fileID: 1343887337}
   - component: {fileID: 1343887336}
   m_Layer: 0
   m_Name: vestido_rojo
@@ -5222,8 +5150,8 @@ Transform:
   m_GameObject: {fileID: 1343887334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 0.56, z: 0}
-  m_LocalScale: {x: 0.07809243, y: 0.10558053, z: 1}
+  m_LocalPosition: {x: 0.238347, y: 0.79417527, z: 0}
+  m_LocalScale: {x: 0.06518375, y: 0.09057754, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1673451572}
@@ -5274,22 +5202,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.823048, y: 13.888903}
   m_EdgeRadius: 0
---- !u!114 &1343887337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343887334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!212 &1343887338
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5428,8 +5340,8 @@ Transform:
   m_GameObject: {fileID: 1353184386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7527, y: -0.4115, z: -10}
-  m_LocalScale: {x: 0.6301707, y: 0.72816867, z: 1}
+  m_LocalPosition: {x: 0.82771134, y: -0.177822, z: -10}
+  m_LocalScale: {x: 0.5260035, y: 0.6246959, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1782790590}
@@ -5445,7 +5357,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1422543447}
   - component: {fileID: 1422543450}
-  - component: {fileID: 1422543449}
   - component: {fileID: 1422543448}
   m_Layer: 0
   m_Name: camiseta_adidas
@@ -5463,8 +5374,8 @@ Transform:
   m_GameObject: {fileID: 1422543446}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4096, y: 2.9356, z: 0}
-  m_LocalScale: {x: 0.08956979, y: 0.096119024, z: 1}
+  m_LocalPosition: {x: -1.1135312, y: 2.8322906, z: 0}
+  m_LocalScale: {x: 0.0747639, y: 0.082460515, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904751663}
@@ -5515,22 +5426,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.55, y: 9.08}
   m_EdgeRadius: 0
---- !u!114 &1422543449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422543446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!212 &1422543450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5892,8 +5787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.8734, y: 4.0199995}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 1.32, y: 3.74}
+  m_SizeDelta: {x: 133.5518, y: 25.7381}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492620920
 MonoBehaviour:
@@ -6148,7 +6043,6 @@ GameObject:
   - component: {fileID: 1523572708}
   - component: {fileID: 1523572711}
   - component: {fileID: 1523572710}
-  - component: {fileID: 1523572709}
   m_Layer: 0
   m_Name: camiseta_nike
   m_TagString: Untagged
@@ -6165,29 +6059,13 @@ Transform:
   m_GameObject: {fileID: 1523572707}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 3.3, z: 0}
-  m_LocalScale: {x: 0.0887016, y: 0.08353944, z: 1}
+  m_LocalPosition: {x: 0.14653006, y: 3.1449227, z: 0}
+  m_LocalScale: {x: 0.07403922, y: 0.07166849, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1790465838}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1523572709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523572707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1523572710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6296,7 +6174,6 @@ GameObject:
   - component: {fileID: 1530857213}
   - component: {fileID: 1530857216}
   - component: {fileID: 1530857215}
-  - component: {fileID: 1530857214}
   m_Layer: 0
   m_Name: PocionLimpieza
   m_TagString: Untagged
@@ -6321,22 +6198,6 @@ Transform:
   - {fileID: 292951616}
   m_Father: {fileID: 1246787463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1530857214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530857212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 2
-  texto: {fileID: 292951617}
-  canvas: {fileID: 1246787457}
-  pocion: {fileID: 0}
 --- !u!61 &1530857215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6752,7 +6613,6 @@ GameObject:
   - component: {fileID: 1562605046}
   - component: {fileID: 1562605049}
   - component: {fileID: 1562605048}
-  - component: {fileID: 1562605047}
   m_Layer: 0
   m_Name: PocionSalud
   m_TagString: Untagged
@@ -6777,22 +6637,6 @@ Transform:
   - {fileID: 1638495538}
   m_Father: {fileID: 1246787463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1562605047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562605045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 2
-  texto: {fileID: 1638495539}
-  canvas: {fileID: 1246787457}
-  pocion: {fileID: 0}
 --- !u!61 &1562605048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7036,7 +6880,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1602734118}
   - component: {fileID: 1602734121}
-  - component: {fileID: 1602734120}
   - component: {fileID: 1602734119}
   m_Layer: 0
   m_Name: camiseta_azul
@@ -7054,8 +6897,8 @@ Transform:
   m_GameObject: {fileID: 1602734117}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.65, y: 3.29, z: 0}
-  m_LocalScale: {x: 0.094698876, y: 0.080943674, z: 1}
+  m_LocalPosition: {x: 1.4403131, y: 3.136343, z: 0}
+  m_LocalScale: {x: 0.079045154, y: 0.06944158, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2031279096}
@@ -7106,22 +6949,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.927391, y: 9.929324}
   m_EdgeRadius: 0
---- !u!114 &1602734120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602734117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!212 &1602734121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7318,7 +7145,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1648270558}
   - component: {fileID: 1648270561}
-  - component: {fileID: 1648270560}
   - component: {fileID: 1648270559}
   m_Layer: 0
   m_Name: pantalones_lilas
@@ -7336,8 +7162,8 @@ Transform:
   m_GameObject: {fileID: 1648270557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.29, y: 0.68, z: 0}
-  m_LocalScale: {x: 0.10800745, y: 0.10244719, z: 1}
+  m_LocalPosition: {x: -1.0137012, y: 0.89712775, z: 0}
+  m_LocalScale: {x: 0.09015382, y: 0.08788945, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1654329936}
@@ -7388,22 +7214,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.291861, y: 10.656007}
   m_EdgeRadius: 0
---- !u!114 &1648270560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648270557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!212 &1648270561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7603,7 +7413,6 @@ GameObject:
   - component: {fileID: 1657058815}
   - component: {fileID: 1657058818}
   - component: {fileID: 1657058817}
-  - component: {fileID: 1657058816}
   m_Layer: 0
   m_Name: zapatillas casa
   m_TagString: Untagged
@@ -7620,29 +7429,13 @@ Transform:
   m_GameObject: {fileID: 1657058814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.33, y: -2.7593, z: 0}
-  m_LocalScale: {x: 0.22053607, y: 0.23671459, z: 1}
+  m_LocalPosition: {x: -1.0470893, y: -2.053575, z: 0}
+  m_LocalScale: {x: 0.18408145, y: 0.20307745, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1881833203}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1657058816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657058814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1657058817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7887,7 +7680,6 @@ GameObject:
   - component: {fileID: 1685065478}
   - component: {fileID: 1685065481}
   - component: {fileID: 1685065480}
-  - component: {fileID: 1685065479}
   m_Layer: 0
   m_Name: pantalones_rojos
   m_TagString: Untagged
@@ -7904,29 +7696,13 @@ Transform:
   m_GameObject: {fileID: 1685065477}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.67, y: 2.09, z: 0}
-  m_LocalScale: {x: 0.10816631, y: 0.08528112, z: 1}
+  m_LocalPosition: {x: 1.4570074, y: 2.1068192, z: 0}
+  m_LocalScale: {x: 0.09028642, y: 0.073162675, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 450973737}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1685065479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685065477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1685065480
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8898,7 +8674,6 @@ GameObject:
   - component: {fileID: 1853863515}
   - component: {fileID: 1853863518}
   - component: {fileID: 1853863517}
-  - component: {fileID: 1853863516}
   m_Layer: 0
   m_Name: gorroDormir
   m_TagString: Untagged
@@ -8915,29 +8690,13 @@ Transform:
   m_GameObject: {fileID: 1853863514}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.17, y: -2.86, z: 0}
-  m_LocalScale: {x: 0.26976836, y: 0.23127791, z: 1}
+  m_LocalPosition: {x: 0.2049591, y: -2.1399689, z: 0}
+  m_LocalScale: {x: 0.22517565, y: 0.19841333, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2070921946}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1853863516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853863514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1853863517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9716,7 +9475,6 @@ GameObject:
   - component: {fileID: 1961258431}
   - component: {fileID: 1961258434}
   - component: {fileID: 1961258433}
-  - component: {fileID: 1961258432}
   m_Layer: 0
   m_Name: zapatillas
   m_TagString: Untagged
@@ -9733,29 +9491,13 @@ Transform:
   m_GameObject: {fileID: 1961258430}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.68, y: -1.49, z: 0}
-  m_LocalScale: {x: 0.20001501, y: 0.2723775, z: 1}
+  m_LocalPosition: {x: 1.4653542, y: -0.96459544, z: 0}
+  m_LocalScale: {x: 0.16695252, y: 0.23367265, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1740167798}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1961258432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961258430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1961258433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9864,7 +9606,6 @@ GameObject:
   - component: {fileID: 1991405436}
   - component: {fileID: 1991405439}
   - component: {fileID: 1991405438}
-  - component: {fileID: 1991405437}
   m_Layer: 0
   m_Name: chaqueta_azul
   m_TagString: Untagged
@@ -9881,29 +9622,13 @@ Transform:
   m_GameObject: {fileID: 1991405435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.29, y: -1.08, z: 0}
-  m_LocalScale: {x: 0.080545574, y: 0.10845883, z: 1}
+  m_LocalPosition: {x: -1.0137012, y: -0.61284137, z: 0}
+  m_LocalScale: {x: 0.06723139, y: 0.09304684, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 830373752}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1991405437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991405435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &1991405438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10030,8 +9755,8 @@ Transform:
   m_GameObject: {fileID: 1998092089}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.72, y: -1.7, z: 0}
-  m_LocalScale: {x: 1.25, y: 1, z: 1}
+  m_LocalPosition: {x: -0.8, y: -1.29, z: 0}
+  m_LocalScale: {x: 1, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1228687080}
@@ -10147,6 +9872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  comidaCost: 3
 --- !u!82 &1998092094
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10254,7 +9980,6 @@ GameObject:
   - component: {fileID: 2003907539}
   - component: {fileID: 2003907542}
   - component: {fileID: 2003907541}
-  - component: {fileID: 2003907540}
   m_Layer: 0
   m_Name: vestido_lila
   m_TagString: Untagged
@@ -10271,29 +9996,13 @@ Transform:
   m_GameObject: {fileID: 2003907538}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.74, y: 0.51, z: 0}
-  m_LocalScale: {x: 0.084409975, y: 0.095687814, z: 1}
+  m_LocalPosition: {x: 1.515436, y: 0.7512785, z: 0}
+  m_LocalScale: {x: 0.070457004, y: 0.08209058, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 308105046}
   m_Father: {fileID: 937037339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2003907540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003907538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79460b54f9dcb401892ac583a3137fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 1
-  texto: {fileID: 0}
-  canvasArmario: {fileID: 937037336}
-  ropa: {fileID: 0}
 --- !u!61 &2003907541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10402,7 +10111,6 @@ GameObject:
   - component: {fileID: 2009802804}
   - component: {fileID: 2009802807}
   - component: {fileID: 2009802806}
-  - component: {fileID: 2009802805}
   m_Layer: 0
   m_Name: PocionComida
   m_TagString: Untagged
@@ -10427,22 +10135,6 @@ Transform:
   - {fileID: 1742844240}
   m_Father: {fileID: 1246787463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2009802805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009802803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cantidad: 2
-  texto: {fileID: 1742844241}
-  canvas: {fileID: 1246787457}
-  pocion: {fileID: 0}
 --- !u!61 &2009802806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11067,7 +10759,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 23
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
