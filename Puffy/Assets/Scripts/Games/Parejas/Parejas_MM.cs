@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+    
 
 public class Parejas_MM : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class Parejas_MM : MonoBehaviour
     public float cardSpacing = 2f; // Espaciado entre las cartas
 
     public List<Sprite> cardImages; // Lista de imágenes de las cartas
+
+
 
     void Start()
     {
@@ -58,13 +62,13 @@ public class Parejas_MM : MonoBehaviour
             // Crea los pares de cartas
             for (int i = 0; i < duplicatedImages.Count; i++)
             {
-                // Crea un nuevo GameObject para cada carta y añade el componente Card
-                GameObject card = new GameObject("Carta");
-                card.AddComponent<SpriteRenderer>();
-                Card cardComponent = card.AddComponent<Card>();
-                cardComponent.backImage = Resources.Load<Sprite>("Reverso");
-                cardComponent.frontImage = duplicatedImages[i];
+                GameObject card = new GameObject("Card");
+                card.AddComponent<SpriteRenderer>().sprite = duplicatedImages[i];
+                card.AddComponent<Card>();
+                card.GetComponent<Card>().frontImage = duplicatedImages[i];
+                card.GetComponent<Card>().backImage = Resources.Load<Sprite>("Reverso");
                 cardPairs.Add(card);
+
             }
 
             Debug.Log(cardPairs.Count);
