@@ -84,6 +84,7 @@ public class Card : MonoBehaviour
         
         carta1.Flip();
         carta2.Flip();
+        
         carta1 = null;
         carta2 = null;
 

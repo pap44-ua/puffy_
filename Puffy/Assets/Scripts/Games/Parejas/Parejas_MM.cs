@@ -9,6 +9,10 @@ public class Parejas_MM : MonoBehaviour
     public GameObject playButton;
     public GameObject jugamosText;
     public GameObject tablero;
+    public GameObject cuadroFin;
+    public GameObject victoria;
+    public GameObject atrasButton;
+    public GameObject reiniciarButton;
     public int rows = 4; // Número de filas
     public int columns = 5; // Número de columnas
     public float cardSpacing = 1.25f; // Espaciado entre las cartas
@@ -16,7 +20,12 @@ public class Parejas_MM : MonoBehaviour
     public List<Sprite> cardImages; // Lista de imágenes de las cartas
 
     void Start()
-    {
+    {   
+        cuadroFin.SetActive(false);
+        victoria.SetActive(false);
+        atrasButton.SetActive(false);
+        reiniciarButton.SetActive(false);
+        
         cardImages = new List<Sprite>();
         cardImages.Add(Resources.Load<Sprite>("C1"));
         cardImages.Add(Resources.Load<Sprite>("C2"));
