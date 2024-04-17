@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class CompraComida : MonoBehaviour
 {
     public AudioSource audioSource;
+    public int comidaCost = 50; // Costo de la comida
 
     void OnMouseDown()
     {
@@ -13,7 +15,8 @@ public class CompraComida : MonoBehaviour
         {
             // Reproducir el sonido
             audioSource.Play();
-            // Agregar lógica de añadir comida a la nevera y gasto de monedas
+            // Restar el costo de la comida de las monedas
+            RestarMonedas();
         }
     }
 
@@ -30,6 +33,23 @@ public class CompraComida : MonoBehaviour
         }
     }
 
+    // Método para restar el costo de la comida de las monedas
+    void RestarMonedas()
+    {
+        // Busca el objeto CoinManager en la escena
+        RestarMonedas coinManager = FindObjectOfType<RestarMonedas>();
+
+        // Verifica si se encontró el CoinManager
+        if (coinManager != null)
+        {
+            // Resta el costo de la comida de las monedas usando el método BuyObject del CoinManager
+            coinManager.BuyObject(comidaCost);
+        }
+        else
+        {
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,4 +63,3 @@ public class CompraComida : MonoBehaviour
 
     }
 }
-
