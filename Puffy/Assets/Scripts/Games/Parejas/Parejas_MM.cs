@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
     
 
 public class Parejas_MM : MonoBehaviour
@@ -8,19 +9,14 @@ public class Parejas_MM : MonoBehaviour
     public GameObject playButton;
     public GameObject jugamosText;
     public GameObject tablero;
-
     public int rows = 4; // Número de filas
     public int columns = 5; // Número de columnas
-    public float cardSpacing = 2f; // Espaciado entre las cartas
+    public float cardSpacing = 1.25f; // Espaciado entre las cartas
 
     public List<Sprite> cardImages; // Lista de imágenes de las cartas
 
-
-
     void Start()
     {
-        tablero.SetActive(false);
-
         cardImages = new List<Sprite>();
         cardImages.Add(Resources.Load<Sprite>("C1"));
         cardImages.Add(Resources.Load<Sprite>("C2"));
@@ -32,46 +28,41 @@ public class Parejas_MM : MonoBehaviour
         cardImages.Add(Resources.Load<Sprite>("C8"));
         cardImages.Add(Resources.Load<Sprite>("C9"));
         cardImages.Add(Resources.Load<Sprite>("C10"));
+        cardImages.Add(Resources.Load<Sprite>("C11"));
     }
 
     void OnMouseDown()
     {
         if (gameObject == playButton)
         {
-            jugamosText.SetActive(false);
-            tablero.SetActive(true);
-            playButton.SetActive(false);
 
-            //Debug.Log(cardImages.Count);
+            jugamosText.SetActive(false);
+            playButton.SetActive(false);
+            tablero.SetActive(true);
 
             List<GameObject> cardPairs = new List<GameObject>(); // Lista de pares de cartas
 
-            // Duplica las imágenes de las cartas
-            List<Sprite> duplicatedImages = new List<Sprite>();
+            for(int j = 0; j < 2; j++){
+                for(int i = 0; i < cardImages.Count - 1; i++)
+                {   
+                    Sprite spriteACrear = cardImages[i];
+                    GameObject card = new GameObject("Carta");
+                    SpriteRenderer spriteRenderer = card.AddComponent<SpriteRenderer>();
+                    spriteRenderer.sprite = spriteACrear;
+                    spriteRenderer.sortingOrder = 3;
+                    card.transform.localScale = new Vector3(0.25f, 0.25f, 1f);
 
-            foreach (Sprite image in cardImages)
-            {
-                duplicatedImages.Add(image);
-                duplicatedImages.Add(image); // Añade la misma imagen una vez más
+                    // Añade un BoxCollider2D y ajusta su tamaño según el tamaño de la imagen
+                    BoxCollider2D collider = card.AddComponent<BoxCollider2D>();
+                    collider.size = new Vector2(2.65f, 4f); // Tamaño del collider
+
+                    Card cardComponent = card.AddComponent<Card>();
+                    cardComponent.frontImage = cardImages[i];
+                    cardComponent.backImage = cardImages[cardImages.Count - 1]; // Imagen de la parte trasera de la carta
+                    cardPairs.Add(card);
+                }
             }
 
-            
-            // Baraja las imágenes de las cartas
-            Shuffle(duplicatedImages);
-
-            // Crea los pares de cartas
-            for (int i = 0; i < duplicatedImages.Count; i++)
-            {
-                GameObject card = new GameObject("Card");
-                card.AddComponent<SpriteRenderer>().sprite = duplicatedImages[i];
-                card.AddComponent<Card>();
-                card.GetComponent<Card>().frontImage = duplicatedImages[i];
-                card.GetComponent<Card>().backImage = Resources.Load<Sprite>("Reverso");
-                cardPairs.Add(card);
-
-            }
-
-            Debug.Log(cardPairs.Count);
             // Baraja las cartas
             ShuffleCards(cardPairs);
 
@@ -83,7 +74,6 @@ public class Parejas_MM : MonoBehaviour
             float startX = -totalWidth / 2f + cardSpacing / 2f + 0.6f;
             float startY = totalHeight / 2f - cardSpacing / 2f - 0.35f;
 
-            
             // Asigna posiciones aleatorias a las cartas
             int index = 0;
             for (int row = 0; row < rows; row++)
@@ -98,10 +88,8 @@ public class Parejas_MM : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            Debug.Log("No se ha encontrado el juego");
-        }
+
+
     }
 
     void Shuffle<T>(List<T> list)
@@ -125,4 +113,7 @@ public class Parejas_MM : MonoBehaviour
             cards[randomIndex] = temp;
         }
     }
+    
+
+    
 }
