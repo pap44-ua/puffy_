@@ -10,9 +10,11 @@ public class Card : MonoBehaviour
     public static Card carta1; // Primera carta volteada
     public static Card carta2; // Segunda carta volteada
     public static bool voltearCartas = false; // Indica si se deben voltear las cartas
+    public static int pares = 0; // Número de pares adivinados
     private SpriteRenderer spriteRenderer;
 
     private bool abajo = false; // Indica si la carta está volteada
+    private bool adivinada = false; // Indica si la carta ya fue adivinada
 
     void Start()
     {
@@ -36,52 +38,56 @@ public class Card : MonoBehaviour
 
     public void Flip()
     {
-        if (abajo)
-        {   
-            if(volteadas == 0)
-            {
-                volteadas++;
-                carta1 = this;
-                spriteRenderer.sprite = frontImage;
-                abajo = false;
-            }
-            else if(volteadas == 1)
-            {
-                carta2 = this;
-                spriteRenderer.sprite = frontImage;
-                abajo = false;
+        if(!adivinada){
+            if (abajo)
+            {   
                 
-
-                if(carta1.frontImage == carta2.frontImage)
+                if(volteadas == 0)
                 {
-                    Debug.Log("Son iguales");
-                    carta1 = null;
-                    carta2 = null;
-                    volteadas = 0;
+                    volteadas++;
+                    carta1 = this;
+                    spriteRenderer.sprite = frontImage;
+                    abajo = false;
+                }
+                else if(volteadas == 1)
+                {
+                    carta2 = this;
+                    spriteRenderer.sprite = frontImage;
+                    abajo = false;
+                    
+
+                    if(carta1.frontImage == carta2.frontImage)
+                    {
+                        pares++;
+                        carta1.adivinada = true;
+                        carta2.adivinada = true;
+                        carta1 = null;
+                        carta2 = null;
+                        volteadas = 0;
+                    }
+                    else
+                    {   
+                        voltearCartas = true;
+                        volteadas = 0;
+                    }
                 }
                 else
                 {   
-                    Debug.Log("No son iguales");
-                    voltearCartas = true;
-                    volteadas = 0;
+                    spriteRenderer.sprite = backImage;
                 }
+                
             }
             else
-            {   
+            {
                 spriteRenderer.sprite = backImage;
+                abajo = true;
             }
-            
-        }
-        else
-        {
-            spriteRenderer.sprite = backImage;
-            abajo = true;
+            Debug.Log(pares);
         }
     }
 
     public void VoltearCartas()
     {   
-        
         carta1.Flip();
         carta2.Flip();
         
@@ -90,4 +96,6 @@ public class Card : MonoBehaviour
 
         voltearCartas = false;
     }
+
+    
 }
