@@ -11,38 +11,33 @@ public class CompraComida : MonoBehaviour
     void OnMouseDown()
     {
         // Verificar si se ha asignado un AudioSource y si el objeto es visible
-        if (audioSource != null && isVisible())
+        if (audioSource != null)
         {
             // Reproducir el sonido
             audioSource.Play();
             // Restar el costo de la comida de las monedas
             RestarMonedas();
         }
+        if(this.gameObject.name == "Hamburguesa"){
+            Nevera.cantidadHamburguesa++;
+            PlayerPrefs.SetInt("cantidadHamburguesa", Nevera.cantidadHamburguesa);
+        }
+        
     }
 
-    // Método para verificar si el objeto es visible en la cámara
-    bool isVisible()
-    {
-        if (GetComponent<Renderer>().isVisible)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+    // Mï¿½todo para verificar si el objeto es visible en la cï¿½mara
+    
 
-    // Método para restar el costo de la comida de las monedas
+    // Mï¿½todo para restar el costo de la comida de las monedas
     void RestarMonedas()
     {
         // Busca el objeto CoinManager en la escena
         RestarMonedas coinManager = FindObjectOfType<RestarMonedas>();
 
-        // Verifica si se encontró el CoinManager
+        // Verifica si se encontrï¿½ el CoinManager
         if (coinManager != null)
         {
-            // Resta el costo de la comida de las monedas usando el método BuyObject del CoinManager
+            // Resta el costo de la comida de las monedas usando el mï¿½todo BuyObject del CoinManager
             coinManager.BuyObject(comidaCost);
         }
         else

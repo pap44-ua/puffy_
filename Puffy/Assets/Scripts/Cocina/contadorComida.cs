@@ -5,20 +5,29 @@ using TMPro;
 
 public class contadorComida : MonoBehaviour
 {
-    public int cantidad = 2;
+    public int cantidad;
     public TMP_Text texto;
     public GameObject canvasNevera;
     public GameObject comida;
     // Start is called before the first frame update
     void Start()
     {
+        if (this.gameObject.name == "Hamburguesa") {
+            Nevera.cantidadHamburguesa = PlayerPrefs.GetInt("cantidadHamburguesa");
+            cantidad = Nevera.cantidadHamburguesa;
+            Debug.Log(cantidad);
+        }
         texto.text = "x"+ cantidad.ToString();
+
     }
 
     public void restarComida(){
         if(cantidad > 0){
             cantidad--;
             texto.text = "x"+ cantidad.ToString();
+            PlayerPrefs.SetInt("cantidadHamburguesa", cantidad);
+            Nevera.cantidadHamburguesa = cantidad;
+
         }
     }
     public void OnMouseDown(){
