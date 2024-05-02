@@ -8367,6 +8367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1154111437}
   - component: {fileID: 1154111440}
+  - component: {fileID: 1154111443}
   - component: {fileID: 1154111439}
   - component: {fileID: 1154111441}
   - component: {fileID: 1154111442}
@@ -8425,7 +8426,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.055990577, y: -0.16097301}
+  m_Offset: {x: 0.073899746, y: 0.018125057}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8436,7 +8437,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7864726, y: 1.5019461}
+  m_Size: {x: 4.114749, y: 5.5137463}
   m_EdgeRadius: 0
 --- !u!212 &1154111440
 SpriteRenderer:
@@ -8600,6 +8601,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1154111443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154111436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  pocionCost: 50
 --- !u!1 &1177957101
 GameObject:
   m_ObjectHideFlags: 0
@@ -9289,7 +9304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1246787458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11132,11 +11147,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1530857213}
   - component: {fileID: 1530857216}
+  - component: {fileID: 1530857219}
   - component: {fileID: 1530857215}
   - component: {fileID: 1530857217}
   - component: {fileID: 1530857218}
   m_Layer: 0
-  m_Name: PocionLimpieza
+  m_Name: PocionEnergia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11190,7 +11206,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.055990577, y: -0.16097301}
+  m_Offset: {x: -0.03355837, y: 0.089764595}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11201,7 +11217,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7864726, y: 1.5019461}
+  m_Size: {x: 4.186388, y: 5.370467}
   m_EdgeRadius: 0
 --- !u!212 &1530857216
 SpriteRenderer:
@@ -11365,6 +11381,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1530857219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530857212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  pocionCost: 50
 --- !u!1 &1546690514
 GameObject:
   m_ObjectHideFlags: 0
@@ -11874,9 +11904,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1562605046}
   - component: {fileID: 1562605049}
+  - component: {fileID: 1562605053}
   - component: {fileID: 1562605048}
   - component: {fileID: 1562605050}
   - component: {fileID: 1562605051}
+  - component: {fileID: 1562605052}
   m_Layer: 0
   m_Name: PocionSalud
   m_TagString: Untagged
@@ -11932,7 +11964,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.055990577, y: -0.16097301}
+  m_Offset: {x: 0.040296316, y: 0.027358651}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11943,7 +11975,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7864726, y: 1.5019461}
+  m_Size: {x: 4.391728, y: 5.708022}
   m_EdgeRadius: 0
 --- !u!212 &1562605049
 SpriteRenderer:
@@ -12107,6 +12139,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1562605052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562605045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  pocionCost: 50
+--- !u!114 &1562605053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562605045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  pocionCost: 50
 --- !u!1 &1589866670
 GameObject:
   m_ObjectHideFlags: 0
@@ -17950,9 +18010,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2009802804}
   - component: {fileID: 2009802807}
+  - component: {fileID: 2009802811}
   - component: {fileID: 2009802806}
   - component: {fileID: 2009802808}
   - component: {fileID: 2009802809}
+  - component: {fileID: 2009802810}
   m_Layer: 0
   m_Name: PocionComida
   m_TagString: Untagged
@@ -18008,7 +18070,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.055990577, y: -0.16097301}
+  m_Offset: {x: 0.040296078, y: 0.011664748}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18019,7 +18081,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7864726, y: 1.5019461}
+  m_Size: {x: 4.2661734, y: 5.6138563}
   m_EdgeRadius: 0
 --- !u!212 &2009802807
 SpriteRenderer:
@@ -18183,6 +18245,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2009802810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009802803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  pocionCost: 50
+--- !u!114 &2009802811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009802803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  pocionCost: 50
 --- !u!1 &2030707609
 GameObject:
   m_ObjectHideFlags: 0
