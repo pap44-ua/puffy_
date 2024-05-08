@@ -705,7 +705,6 @@ GameObject:
   - component: {fileID: 424322247}
   - component: {fileID: 424322246}
   - component: {fileID: 424322245}
-  - component: {fileID: 424322248}
   m_Layer: 0
   m_Name: SwipeControllerRight
   m_TagString: Untagged
@@ -770,8 +769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88d043444069cd4e839d326ccfdd46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectSwipeOnlyAfterRelease: 1
-  minDistanceForSwipe: 20
 --- !u!4 &424322247
 Transform:
   m_ObjectHideFlags: 0
@@ -787,18 +784,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &424322248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424322244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385bac40aef22a0468b63a464ca27bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &575989593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,8 +2943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e1cf515e6137a4c9aab8b8b31ea7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectSwipeOnlyAfterRelease: 1
-  minDistanceForSwipe: 20
 --- !u!4 &1812641717
 Transform:
   m_ObjectHideFlags: 0
