@@ -5,6 +5,7 @@ using UnityEngine;
 public class quitarArmario : MonoBehaviour
 {
     public GameObject armario;
+    
     // Start is called before the first frame update
 
     public void UwU()
