@@ -9,9 +9,6 @@ public class IconClickHandler : MonoBehaviour
     public GameObject ojosAbiertos;
     public GameObject ojosCerrados;
     public GameObject zzz;
-
-    public LinearIndicator energia;
-    public float energiaBajaThreshold = 25f;
     public GameObject ojosCansados;
     //private bool estaDormido = false;
 
@@ -21,18 +18,7 @@ public class IconClickHandler : MonoBehaviour
     }
 
     void Update() {
-        // Verificar si la energía es baja y cambiar los ojos
-
-        if (energia.GetValue() <= energiaBajaThreshold)
-        {
-            ojosAbiertos.SetActive(false);
-            ojosCansados.SetActive(true);
-        }
-        else
-        {
-            ojosAbiertos.SetActive(true);
-            ojosCansados.SetActive(false);
-        }
+       
     }
 
     public void OnMouseDown()
@@ -41,10 +27,17 @@ public class IconClickHandler : MonoBehaviour
         iconoDormir.SetActive(!iconoDormir.activeSelf);
         iconoDespierto.SetActive(!iconoDespierto.activeSelf);
         
-        //ojosAbiertos.SetActive(false);
+        if(ojosAbiertos.activeSelf){
+            ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
+        }
         ojosCerrados.SetActive(!ojosCerrados.activeSelf);
-        //ojosCansados.SetActive(!ojosCansados.activeSelf);
+       if(ojosCansados.activeSelf){
+         ojosCansados.SetActive(!ojosCansados.activeSelf);
+       }
         zzz.SetActive(!zzz.activeSelf);
+        iconoDormir.SendMessage("durmiendo");
 
     }
+
+    
 }
