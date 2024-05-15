@@ -28,7 +28,10 @@ public class Dormitorio : MonoBehaviour
     public GameObject zapatillas;
     public GameObject pantunflas;
 
-    //public bool dormido = false;
+    public LinearIndicator energia;
+    public float energiaBajaThreshold = 25f;
+    public GameObject ojosCansados;
+    public GameObject ojosAbiertos;
 
 
     // Start is called before the first frame update
@@ -56,12 +59,23 @@ public class Dormitorio : MonoBehaviour
         zapatillas.SetActive(false);
         pantunflas.SetActive(false);
 
+        // Verificar si la energía es baja y cambiar los ojos
+        if (energia.GetValue() <= energiaBajaThreshold)
+        {
+            ojosAbiertos.SetActive(false);
+            ojosCansados.SetActive(true);
+        }
+        else
+        {
+            ojosAbiertos.SetActive(true);
+            ojosCansados.SetActive(false);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Anim.SetBool("dormido", dormido);
         if (Input.touchCount > 0)
         {
             // Itera a través de todos los toques que hay en la pantalla
