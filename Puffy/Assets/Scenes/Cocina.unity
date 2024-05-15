@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 14735590}
   - component: {fileID: 14735589}
-  - component: {fileID: 14735591}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -208,18 +207,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 138445527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &14735591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14735588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e32c6e04a71ff4993d8ee915e6a548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &41368012
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +545,7 @@ MonoBehaviour:
   texto: {fileID: 769337455}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 1174486716}
+  stringComida: 
 --- !u!1 &138445524
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +886,7 @@ MonoBehaviour:
   texto: {fileID: 2039157760}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 1576552593}
+  stringComida: 
 --- !u!1 &281918334
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +962,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281918334}
   m_CullTransparentMesh: 0
+--- !u!1 &284090664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284090667}
+  - component: {fileID: 284090665}
+  - component: {fileID: 284090668}
+  m_Layer: 0
+  m_Name: SwipeControllerRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &284090665
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284090664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.195318, y: -2.6143603}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7795868, y: 6.7948503}
+  m_EdgeRadius: 0
+--- !u!4 &284090667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284090664}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.186482, y: 2.7641823, z: -0.016783878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &284090668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284090664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d3dd862c4d0234b8e09d9e84e4b357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectSwipeOnlyAfterRelease: 1
+  minDistanceForSwipe: 20
 --- !u!1 &288540721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1519,7 @@ MonoBehaviour:
   texto: {fileID: 1589633319}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 650493193}
+  stringComida: 
 --- !u!1 &361058132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,6 +2251,7 @@ MonoBehaviour:
   texto: {fileID: 793359799}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 729408497}
+  stringComida: 
 --- !u!1 &515291466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2530,7 @@ MonoBehaviour:
   texto: {fileID: 1043251652}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 1690486027}
+  stringComida: 
 --- !u!1 &617917252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,10 +3440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec7cb0a8f4c70c489cc86be8bf72077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidad: 2
+  cantidad: 0
   texto: {fileID: 903993471}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 806980946}
+  stringComida: 
 --- !u!1 &729408497
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,6 +5188,7 @@ MonoBehaviour:
   texto: {fileID: 1525328354}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 1889208795}
+  stringComida: 
 --- !u!1 &1043251650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,6 +5992,7 @@ MonoBehaviour:
   texto: {fileID: 718803108}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 2056083541}
+  stringComida: 
 --- !u!1 &1261005654
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,6 +6090,7 @@ MonoBehaviour:
   texto: {fileID: 644258393}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 328548732}
+  stringComida: 
 --- !u!1 &1273377874
 GameObject:
   m_ObjectHideFlags: 0
@@ -6015,7 +6103,6 @@ GameObject:
   - component: {fileID: 1273377878}
   - component: {fileID: 1273377877}
   - component: {fileID: 1273377876}
-  - component: {fileID: 1273377875}
   m_Layer: 0
   m_Name: shop
   m_TagString: Untagged
@@ -6023,18 +6110,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1273377875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273377874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3221ba0b572c8dd48bb40c82a8abda88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1273377876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6067,18 +6142,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5290885, y: -0.10964918}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78, y: 1}
+    oldSize: {x: 15.47, y: 13.72}
     newSize: {x: 0.78, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.78, y: 1}
+  m_Size: {x: 15.806144, y: 13.496915}
   m_EdgeRadius: 0
 --- !u!114 &1273377877
 MonoBehaviour:
@@ -6133,7 +6208,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc2e9899e0228424880e624c61fd2d56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb6055e1258514d5cb0c2b68003b509b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6153,8 +6228,8 @@ Transform:
   m_GameObject: {fileID: 1273377874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.59, y: -4.02, z: 0}
-  m_LocalScale: {x: 1.2067, y: 1.2067, z: 1.2067}
+  m_LocalPosition: {x: -1.5723, y: -3.88, z: 0}
+  m_LocalScale: {x: 0.084215306, y: 0.078338616, z: 1.2067}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7734,6 +7809,7 @@ MonoBehaviour:
   texto: {fileID: 1114208792}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 1492924552}
+  stringComida: 
 --- !u!1 &1616782746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8584,6 +8660,7 @@ MonoBehaviour:
   texto: {fileID: 1480081051}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 1302851200}
+  stringComida: 
 --- !u!1 &1831507248
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,6 +9198,98 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasNevera: {fileID: 412439462}
+--- !u!1 &1957275824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957275827}
+  - component: {fileID: 1957275826}
+  - component: {fileID: 1957275825}
+  m_Layer: 0
+  m_Name: SwipeControllerLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1957275825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957275824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3359efbb6f9ba4081e22e9eb4f14b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectSwipeOnlyAfterRelease: 1
+  minDistanceForSwipe: 20
+--- !u!61 &1957275826
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957275824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.5888712, y: -2.6992354}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7775912, y: 6.398471}
+  m_EdgeRadius: 0
+--- !u!4 &1957275827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957275824}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.186482, y: 2.7641823, z: -0.016783878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1960670625
 GameObject:
   m_ObjectHideFlags: 0
@@ -9699,7 +9868,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 514f0c7cd1c52544bbe3dd084e77e150, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.74, y: 1.06}
@@ -9717,7 +9886,7 @@ Transform:
   m_GameObject: {fileID: 2045527138}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.54, y: -3.92, z: 0}
+  m_LocalPosition: {x: 1.66, y: -3.92, z: 0}
   m_LocalScale: {x: 1.1294, y: 1.1294, z: 1.1294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10172,6 +10341,7 @@ MonoBehaviour:
   texto: {fileID: 1352358733}
   canvasNevera: {fileID: 412439462}
   comida: {fileID: 1831507248}
+  stringComida: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -10188,3 +10358,5 @@ SceneRoots:
   - {fileID: 68986749}
   - {fileID: 2027203290}
   - {fileID: 984960144}
+  - {fileID: 284090667}
+  - {fileID: 1957275827}

@@ -24,7 +24,7 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
         comida.SetValue(50);
         diversion.SetValue(75);
         energia.SetValue(25);
-        salud.SetValue(100);
+        salud.SetValue(40);
 
     }
 

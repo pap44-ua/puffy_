@@ -5,6 +5,10 @@ public class beber : MonoBehaviour
     public GameObject moneda;
     private Animator monedaAnimator;
     public GameObject bocabuena;
+    public LinearIndicator diversion;
+    public LinearIndicator salud;
+    public LinearIndicator comida;
+    public LinearIndicator energia;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,22 @@ public class beber : MonoBehaviour
         // Desactiva la moneda después de un retraso de 2 segundos
         Invoke("DesactivarMoneda", 1f);
         this.gameObject.SetActive(false);
+        switch (gameObject.name)
+        {
+            case "pocionDiversion":
+                diversion.SetValue(diversion.GetValue() + 25);
+                break;
+            case "pocionSalud":
+                salud.SetValue(salud.GetValue() + 25);
+                break;
+            case "pocionComida":
+                comida.SetValue(comida.GetValue() + 25);
+                break;
+            case "pocionEnergia":
+                energia.SetValue(energia.GetValue() + 25);
+                break;
+        }
+
     }
 
     // Método para desactivar la moneda
