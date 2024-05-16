@@ -15,6 +15,9 @@ public class Parejas_MM : MonoBehaviour
 
     public List<Sprite> cardImages; // Lista de imágenes de las cartas
 
+    public AudioClip flipSound; // Sonido de volteo de cartas
+    private AudioSource audioSource;
+
     void Start()
     {   
         
@@ -30,6 +33,10 @@ public class Parejas_MM : MonoBehaviour
         cardImages.Add(Resources.Load<Sprite>("C9"));
         cardImages.Add(Resources.Load<Sprite>("C10"));
         cardImages.Add(Resources.Load<Sprite>("C11"));
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        flipSound = Resources.Load<AudioClip>("cartas");
+        audioSource.clip = flipSound;
     }
 
     void OnMouseDown()
@@ -60,6 +67,10 @@ public class Parejas_MM : MonoBehaviour
                     Card cardComponent = card.AddComponent<Card>();
                     cardComponent.frontImage = cardImages[i];
                     cardComponent.backImage = cardImages[cardImages.Count - 1]; // Imagen de la parte trasera de la carta
+                    
+                    cardComponent.flipSound = flipSound; // Asigna el sonido de volteo
+                    cardComponent.audioSource = audioSource; // Asigna el audio source
+
                     cardPairs.Add(card);
                 }
             }

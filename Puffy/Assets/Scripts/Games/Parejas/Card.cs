@@ -23,9 +23,13 @@ public class Card : MonoBehaviour
     private bool abajo = false; // Indica si la carta está volteada
     private bool adivinada = false; // Indica si la carta ya fue adivinada
 
+    public AudioClip flipSound; // Sonido de volteo de cartas
+    public AudioSource audioSource;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = gameObject.AddComponent<AudioSource>();
         Flip(); // Voltea la carta al inicio para mostrar su parte trasera
         abajo = true;
 
@@ -34,6 +38,9 @@ public class Card : MonoBehaviour
         finalImages.Add(Resources.Load<Sprite>("F2")); //Victoria
         finalImages.Add(Resources.Load<Sprite>("F3")); //Atras
         finalImages.Add(Resources.Load<Sprite>("F4")); //Reiniciar
+
+        flipSound = Resources.Load<AudioClip>("cartas");
+        audioSource.clip = flipSound;
     }
 
     void OnMouseDown()
@@ -43,9 +50,12 @@ public class Card : MonoBehaviour
             VoltearCartas();
         }
         else if(gameObject == Atras){
+            Debug.Log("atras");
+
             SceneManager.LoadScene("Jardin");
         }
         else if(gameObject == Reiniciar){
+            Debug.Log("reiniciar");
             SceneManager.LoadScene("Parejas");
         }
         else{
@@ -65,12 +75,14 @@ public class Card : MonoBehaviour
                     volteadas++;
                     carta1 = this;
                     spriteRenderer.sprite = frontImage;
+                    PlayFlipSound();
                     abajo = false;
                 }
                 else if(volteadas == 1)
                 {
                     carta2 = this;
                     spriteRenderer.sprite = frontImage;
+                    PlayFlipSound();
                     abajo = false;
                     
 
@@ -121,6 +133,14 @@ public class Card : MonoBehaviour
         voltearCartas = false;
     }
 
+    private void PlayFlipSound()
+    {
+        if (flipSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(flipSound);
+        }
+    }
+
     public void final()
     {   
         
@@ -149,7 +169,9 @@ public class Card : MonoBehaviour
         // Añade un BoxCollider2D y ajusta su tamaño según el tamaño de la imagen
         BoxCollider2D collider = atras.AddComponent<BoxCollider2D>();
         collider.size = new Vector2(4.08f, 2f); // Tamaño del collider
-        Card cardComponent = atras.AddComponent<Card>();
+
+        atras.AddComponent<Final>();
+        GameObject Atras = atras;
 
         Sprite spriteACrear4 = finalImages[3];
         GameObject reiniciar = new GameObject("Reiniciar");
@@ -161,6 +183,6 @@ public class Card : MonoBehaviour
         // Añade un BoxCollider2D y ajusta su tamaño según el tamaño de la imagen
         BoxCollider2D collider2 = reiniciar.AddComponent<BoxCollider2D>();
         collider2.size = new Vector2(4.08f, 2f); // Tamaño del collider
-        Card cardComponent2 = reiniciar.AddComponent<Card>();
+        GameObject Reiniciar = reiniciar;
     }
 }

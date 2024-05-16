@@ -343,14 +343,11 @@ MonoBehaviour:
   playButton: {fileID: 652188997}
   jugamosText: {fileID: 1898887538}
   tablero: {fileID: 1021797144}
-  cuadroFin: {fileID: 0}
-  victoria: {fileID: 0}
-  atrasButton: {fileID: 0}
-  reiniciarButton: {fileID: 0}
   rows: 5
   columns: 4
   cardSpacing: 1.25
   cardImages: []
+  flipSound: {fileID: 0}
 --- !u!1 &1021797144
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,14 +448,11 @@ MonoBehaviour:
   playButton: {fileID: 652188997}
   jugamosText: {fileID: 1898887538}
   tablero: {fileID: 1021797144}
-  cuadroFin: {fileID: 0}
-  victoria: {fileID: 0}
-  atrasButton: {fileID: 0}
-  reiniciarButton: {fileID: 0}
   rows: 5
   columns: 4
   cardSpacing: 1.25
   cardImages: []
+  flipSound: {fileID: 0}
 --- !u!1 &1158179973
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,14 +645,11 @@ MonoBehaviour:
   playButton: {fileID: 652188997}
   jugamosText: {fileID: 1898887538}
   tablero: {fileID: 1021797144}
-  cuadroFin: {fileID: 0}
-  victoria: {fileID: 0}
-  atrasButton: {fileID: 0}
-  reiniciarButton: {fileID: 0}
   rows: 5
   columns: 4
   cardSpacing: 1.25
   cardImages: []
+  flipSound: {fileID: 0}
 --- !u!1 &1898887538
 GameObject:
   m_ObjectHideFlags: 0
