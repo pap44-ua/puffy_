@@ -78,7 +78,7 @@ public class IconClickDormir : MonoBehaviour
         ojosCerrados.SetActive(!ojosCerrados.activeSelf);
         if (energia.GetValue() <= energiaBajaThreshold)
         {
-            
+       
             ojosCansados.SetActive(!ojosCansados.activeSelf);
         }
         else{

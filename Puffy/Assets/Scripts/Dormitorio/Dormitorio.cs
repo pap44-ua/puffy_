@@ -22,7 +22,6 @@ public class Dormitorio : MonoBehaviour
     public GameObject pantalonesLilas;
     public GameObject pantalonesRojos;
     public GameObject pulsera;
-    public GameObject tatuaje;
     public GameObject vestidoLila;
     public GameObject vestidoRojo;
     public GameObject zapatillas;
@@ -53,7 +52,6 @@ public class Dormitorio : MonoBehaviour
         pantalonesLilas.SetActive(false);
         pantalonesRojos.SetActive(false);
         pulsera.SetActive(false);
-        tatuaje.SetActive(false);
         vestidoLila.SetActive(false);
         vestidoRojo.SetActive(false);
         zapatillas.SetActive(false);
@@ -156,11 +154,6 @@ public class Dormitorio : MonoBehaviour
                         {
                             // Ejecuta la lógica específica para el objeto deseado
                             pulsera.SetActive(!pulsera.activeSelf);
-                        }
-                        if (hit.collider.gameObject == tatuaje)
-                        {
-                            // Ejecuta la lógica específica para el objeto deseado
-                            tatuaje.SetActive(!tatuaje.activeSelf);
                         }
                         if (hit.collider.gameObject == vestidoLila)
                         {
