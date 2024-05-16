@@ -1,8 +1,5 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
-
 using UnityEngine.SceneManagement;
 
 public class Card : MonoBehaviour
@@ -13,8 +10,8 @@ public class Card : MonoBehaviour
     public static Card carta1; // Primera carta volteada
     public static Card carta2; // Segunda carta volteada
     public static bool voltearCartas = false; // Indica si se deben voltear las cartas
-    public static GameObject Atras;
-    public static GameObject Reiniciar;
+    public GameObject Atras;
+    public GameObject Reiniciar;
     public static int pares = 0; // Número de pares adivinados
     private SpriteRenderer spriteRenderer;
 
@@ -41,36 +38,40 @@ public class Card : MonoBehaviour
 
         flipSound = Resources.Load<AudioClip>("cartas");
         audioSource.clip = flipSound;
+
     }
 
     void OnMouseDown()
     {
-        if(voltearCartas)
+        if (voltearCartas)
         {
             VoltearCartas();
         }
-        else if(gameObject == Atras){
+        else if (gameObject == Atras)
+        {
             Debug.Log("atras");
-
             SceneManager.LoadScene("Jardin");
         }
-        else if(gameObject == Reiniciar){
+        else if (gameObject == Reiniciar)
+        {
             Debug.Log("reiniciar");
             SceneManager.LoadScene("Parejas");
         }
-        else{
+        else
+        {
             Flip();
         }
-        
+
     }
 
     public void Flip()
     {
-        if(!adivinada){
+        if (!adivinada)
+        {
             if (abajo)
-            {   
-                
-                if(volteadas == 0)
+            {
+
+                if (volteadas == 0)
                 {
                     volteadas++;
                     carta1 = this;
@@ -78,15 +79,15 @@ public class Card : MonoBehaviour
                     PlayFlipSound();
                     abajo = false;
                 }
-                else if(volteadas == 1)
+                else if (volteadas == 1)
                 {
                     carta2 = this;
                     spriteRenderer.sprite = frontImage;
                     PlayFlipSound();
                     abajo = false;
-                    
 
-                    if(carta1.frontImage == carta2.frontImage)
+
+                    if (carta1.frontImage == carta2.frontImage)
                     {
                         pares++;
                         carta1.adivinada = true;
@@ -94,19 +95,19 @@ public class Card : MonoBehaviour
                         carta1 = null;
                         carta2 = null;
                         volteadas = 0;
-                        
+
                     }
                     else
-                    {   
+                    {
                         voltearCartas = true;
                         volteadas = 0;
                     }
                 }
                 else
-                {   
+                {
                     spriteRenderer.sprite = backImage;
                 }
-                
+
             }
             else
             {
@@ -115,7 +116,7 @@ public class Card : MonoBehaviour
             }
             Debug.Log(pares);
 
-            if(pares == 10)
+            if (pares == 10)
             {
                 final();
             }
@@ -123,10 +124,10 @@ public class Card : MonoBehaviour
     }
 
     public void VoltearCartas()
-    {   
+    {
         carta1.Flip();
         carta2.Flip();
-        
+
         carta1 = null;
         carta2 = null;
 
@@ -142,8 +143,8 @@ public class Card : MonoBehaviour
     }
 
     public void final()
-    {   
-        
+    {
+
         Sprite spriteACrear = finalImages[0];
         GameObject fin = new GameObject("Cuadro");
         SpriteRenderer spriteRenderer = fin.AddComponent<SpriteRenderer>();
@@ -183,6 +184,7 @@ public class Card : MonoBehaviour
         // Añade un BoxCollider2D y ajusta su tamaño según el tamaño de la imagen
         BoxCollider2D collider2 = reiniciar.AddComponent<BoxCollider2D>();
         collider2.size = new Vector2(4.08f, 2f); // Tamaño del collider
+        reiniciar.AddComponent<Final>();
         GameObject Reiniciar = reiniciar;
     }
 }
