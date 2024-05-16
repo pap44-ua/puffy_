@@ -81,7 +81,7 @@ public class IconClickDormir : MonoBehaviour
         // Si la corrutina termina naturalmente sin ser detenida, despertar a Puffy
         DetenerSueno();
     }
-<<<<<<< HEAD
+
     public void OnMouseDown()
     {
         fondoOscuro.SetActive(!fondoOscuro.activeSelf);
@@ -99,6 +99,5 @@ public class IconClickDormir : MonoBehaviour
         
         zzz.SetActive(!zzz.activeSelf);
     }
-=======
->>>>>>> parent of e3be29e (Funciona aumentar barra energia y ojos cansados)
+
 }
