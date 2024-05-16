@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class clickJabon : MonoBehaviour
 {
+    public AudioSource audio;
     public bool jabon;
     public GameObject prefabBurbujas;
     private Animator animacionBurbujas;
@@ -12,6 +13,10 @@ public class clickJabon : MonoBehaviour
     {
         //GameObject burbujaInstanciada = Instantiate(prefabBurbujas, transform.position, Quaternion.identity);
         prefabBurbujas.SetActive(true);
+        if(audio != null)
+        {
+            audio.Play();
+        }
         
         
     }
