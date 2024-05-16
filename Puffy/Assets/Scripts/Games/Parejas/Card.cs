@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
-
-using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Threading;
 
 public class Card : MonoBehaviour
 {
@@ -13,12 +10,8 @@ public class Card : MonoBehaviour
     public static Card carta1; // Primera carta volteada
     public static Card carta2; // Segunda carta volteada
     public static bool voltearCartas = false; // Indica si se deben voltear las cartas
-    public static GameObject Atras;
-    public static GameObject Reiniciar;
     public static int pares = 0; // Número de pares adivinados
     private SpriteRenderer spriteRenderer;
-
-    public List<Sprite> finalImages;
 
     private bool abajo = false; // Indica si la carta está volteada
     private bool adivinada = false; // Indica si la carta ya fue adivinada
@@ -28,25 +21,14 @@ public class Card : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         Flip(); // Voltea la carta al inicio para mostrar su parte trasera
         abajo = true;
-
-        finalImages = new List<Sprite>();
-        finalImages.Add(Resources.Load<Sprite>("F1")); //Cuadro
-        finalImages.Add(Resources.Load<Sprite>("F2")); //Victoria
-        finalImages.Add(Resources.Load<Sprite>("F3")); //Atras
-        finalImages.Add(Resources.Load<Sprite>("F4")); //Reiniciar
     }
 
     void OnMouseDown()
     {
+        
         if(voltearCartas)
         {
             VoltearCartas();
-        }
-        else if(gameObject == Atras){
-            SceneManager.LoadScene("Jardin");
-        }
-        else if(gameObject == Reiniciar){
-            SceneManager.LoadScene("Parejas");
         }
         else{
             Flip();
@@ -82,7 +64,6 @@ public class Card : MonoBehaviour
                         carta1 = null;
                         carta2 = null;
                         volteadas = 0;
-                        
                     }
                     else
                     {   
@@ -102,11 +83,6 @@ public class Card : MonoBehaviour
                 abajo = true;
             }
             Debug.Log(pares);
-
-            if(pares == 10)
-            {
-                final();
-            }
         }
     }
 
@@ -121,46 +97,5 @@ public class Card : MonoBehaviour
         voltearCartas = false;
     }
 
-    public void final()
-    {   
-        
-        Sprite spriteACrear = finalImages[0];
-        GameObject fin = new GameObject("Cuadro");
-        SpriteRenderer spriteRenderer = fin.AddComponent<SpriteRenderer>();
-        spriteRenderer.sprite = spriteACrear;
-        spriteRenderer.sortingOrder = 4;
-        fin.transform.localScale = new Vector3(0.11f, 0.17f, 1f);
-
-        Sprite spriteACrear2 = finalImages[1];
-        GameObject victoria = new GameObject("Victoria");
-        SpriteRenderer spriteRenderer2 = victoria.AddComponent<SpriteRenderer>();
-        spriteRenderer2.sprite = spriteACrear2;
-        spriteRenderer2.sortingOrder = 5;
-        victoria.transform.localScale = new Vector3(0.46f, 0.46f, 1f);
-        victoria.transform.position = new Vector3(0f, 0.881f, 0f);
-
-        Sprite spriteACrear3 = finalImages[2];
-        GameObject atras = new GameObject("Atras");
-        SpriteRenderer spriteRenderer3 = atras.AddComponent<SpriteRenderer>();
-        spriteRenderer3.sprite = spriteACrear3;
-        spriteRenderer3.sortingOrder = 5;
-        atras.transform.localScale = new Vector3(0.31f, 0.31f, 1f);
-        atras.transform.position = new Vector3(0f, -0.6f, 0f);
-        // Añade un BoxCollider2D y ajusta su tamaño según el tamaño de la imagen
-        BoxCollider2D collider = atras.AddComponent<BoxCollider2D>();
-        collider.size = new Vector2(4.08f, 2f); // Tamaño del collider
-        Card cardComponent = atras.AddComponent<Card>();
-
-        Sprite spriteACrear4 = finalImages[3];
-        GameObject reiniciar = new GameObject("Reiniciar");
-        SpriteRenderer spriteRenderer4 = reiniciar.AddComponent<SpriteRenderer>();
-        spriteRenderer4.sprite = spriteACrear4;
-        spriteRenderer4.sortingOrder = 5;
-        reiniciar.transform.localScale = new Vector3(0.31f, 0.31f, 1f);
-        reiniciar.transform.position = new Vector3(0f, 0.13f, 0f);
-        // Añade un BoxCollider2D y ajusta su tamaño según el tamaño de la imagen
-        BoxCollider2D collider2 = reiniciar.AddComponent<BoxCollider2D>();
-        collider2.size = new Vector2(4.08f, 2f); // Tamaño del collider
-        Card cardComponent2 = reiniciar.AddComponent<Card>();
-    }
+    
 }
