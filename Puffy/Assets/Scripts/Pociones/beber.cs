@@ -9,6 +9,7 @@ public class beber : MonoBehaviour
     public LinearIndicator salud;
     public LinearIndicator comida;
     public LinearIndicator energia;
+    public AudioSource audioUwU;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class beber : MonoBehaviour
         moneda.SetActive(false);
 
         // Obtén el componente Animator de la moneda
-        monedaAnimator = moneda.GetComponent<Animator>();
+        //monedaAnimator = moneda.GetComponent<Animator>();
     }
 
     public void OnMouseDown()
@@ -26,14 +27,24 @@ public class beber : MonoBehaviour
         // Activa la moneda
         moneda.SetActive(true);
 
-        // Si hay un Animator adjunto a la moneda, inicia la animación
-        if (monedaAnimator != null)
+        if(audioUwU!=null)
         {
-            monedaAnimator.Play("rotateCoin", 0, 0); // Reemplaza "rotateCoin" con el nombre de tu animación
+            audioUwU.Play();
+            Debug.Log("huh?");
+        }
+        else
+        {
+            Debug.Log("UWUUUUUUUUUUUUU");
         }
 
+        // Si hay un Animator adjunto a la moneda, inicia la animación
+        /*if (monedaAnimator != null)
+        {
+            monedaAnimator.Play("rotateCoin", 0, 0); // Reemplaza "rotateCoin" con el nombre de tu animación
+        }*/
+
         // Desactiva la moneda después de un retraso de 2 segundos
-        Invoke("DesactivarMoneda", 1f);
+        //Invoke("DesactivarMoneda", 1f);
         this.gameObject.SetActive(false);
         switch (gameObject.name)
         {
