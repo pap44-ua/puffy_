@@ -867,7 +867,7 @@ MonoBehaviour:
   ojosCansados: {fileID: 2015400945}
   zzz: {fileID: 21352829}
   energia: {fileID: 225581546}
-  energiaBajaThreshold: 25
+  tiempoDeSueno: 5
   aumentoDeEnergiaPorSegundo: 5
 --- !u!1 &117697873
 GameObject:
@@ -5831,6 +5831,8 @@ MonoBehaviour:
   ojosAbiertos: {fileID: 1175213139}
   ojosCerrados: {fileID: 1440878132}
   zzz: {fileID: 21352829}
+  energia: {fileID: 225581546}
+  energiaBajaThreshold: 25
   ojosCansados: {fileID: 2015400945}
 --- !u!61 &1074640641
 BoxCollider2D:

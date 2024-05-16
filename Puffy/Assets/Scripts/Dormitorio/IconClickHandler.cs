@@ -14,11 +14,12 @@ public class IconClickHandler : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
-    void Update() {
-       
+    void Update()
+    {
+
     }
 
     public void OnMouseDown()
@@ -26,18 +27,20 @@ public class IconClickHandler : MonoBehaviour
         fondoOscuro.SetActive(!fondoOscuro.activeSelf);
         iconoDormir.SetActive(!iconoDormir.activeSelf);
         iconoDespierto.SetActive(!iconoDespierto.activeSelf);
-        
-        if(ojosAbiertos.activeSelf){
+
+        if (ojosAbiertos.activeSelf)
+        {
             ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
         }
         ojosCerrados.SetActive(!ojosCerrados.activeSelf);
-       if(ojosCansados.activeSelf){
-         ojosCansados.SetActive(!ojosCansados.activeSelf);
-       }
+        if (ojosCansados.activeSelf)
+        {
+            ojosCansados.SetActive(!ojosCansados.activeSelf);
+        }
         zzz.SetActive(!zzz.activeSelf);
         iconoDormir.SendMessage("durmiendo");
 
     }
 
-    
+
 }

@@ -86,5 +86,5 @@ public class IconClickDormir : MonoBehaviour
         }
         
         zzz.SetActive(!zzz.activeSelf);
-    }
+    }
 }
