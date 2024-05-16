@@ -9,13 +9,16 @@ public class IconClickHandler : MonoBehaviour
     public GameObject ojosAbiertos;
     public GameObject ojosCerrados;
     public GameObject zzz;
+    public GameObject ojosCansados;
+    //private bool estaDormido = false;
 
     void Start()
     {
-        
+
     }
 
-    void Update() {
+    void Update()
+    {
 
     }
 
@@ -24,9 +27,20 @@ public class IconClickHandler : MonoBehaviour
         fondoOscuro.SetActive(!fondoOscuro.activeSelf);
         iconoDormir.SetActive(!iconoDormir.activeSelf);
         iconoDespierto.SetActive(!iconoDespierto.activeSelf);
-        ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
+
+        if (ojosAbiertos.activeSelf)
+        {
+            ojosAbiertos.SetActive(!ojosAbiertos.activeSelf);
+        }
         ojosCerrados.SetActive(!ojosCerrados.activeSelf);
+        if (ojosCansados.activeSelf)
+        {
+            ojosCansados.SetActive(!ojosCansados.activeSelf);
+        }
         zzz.SetActive(!zzz.activeSelf);
+        iconoDormir.SendMessage("durmiendo");
 
     }
+
+
 }
