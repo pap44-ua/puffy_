@@ -13,14 +13,18 @@ public class CompraComida : MonoBehaviour
         // Verificar si se ha asignado un AudioSource y si el objeto es visible
         if (audioSource != null)
         {
+
             // Reproducir el sonido
             audioSource.Play();
             // Restar el costo de la comida de las monedas
             RestarMonedas();
+
         }
         sumarCantidad();
 
     }
+
+
 
     private void sumarCantidad()
     {
@@ -76,9 +80,6 @@ public class CompraComida : MonoBehaviour
                 break;
         }
     }
-
-    // M�todo para verificar si el objeto es visible en la c�mara
-
 
     // M�todo para restar el costo de la comida de las monedas
     void RestarMonedas()
