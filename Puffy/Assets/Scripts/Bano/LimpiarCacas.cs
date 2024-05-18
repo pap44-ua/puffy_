@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LimpiarCacas : MonoBehaviour
 {
+    public AudioSource cacaSonido;
+    public LinearIndicator salud;
 
     public void OcultarSprites()
     {
@@ -15,6 +17,10 @@ public class LimpiarCacas : MonoBehaviour
 
     private void OnMouseDown()
     {
+        salud.SetValue(salud.GetValue() + 10);
+        if (cacaSonido  != null) {
+            cacaSonido.Play();
+        }
         OcultarSprites(); // Llamar a la función para ocultar los sprites cuando se hace clic en el GameObject
     }
 }
