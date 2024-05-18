@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidad: 2
+  cantidad: 0
   texto: {fileID: 860181331}
   canvas: {fileID: 1297917334}
   pocion: {fileID: 1205896512}
@@ -4003,7 +4003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidad: 2
+  cantidad: 0
   texto: {fileID: 1003043481}
   canvas: {fileID: 1297917334}
   pocion: {fileID: 1888229320}
@@ -4563,7 +4563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidad: 2
+  cantidad: 0
   texto: {fileID: 1208744148}
   canvas: {fileID: 1297917334}
   pocion: {fileID: 207934972}
@@ -6575,7 +6575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2560b03913bb35d40bcfef4ef7873cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidad: 2
+  cantidad: 0
   texto: {fileID: 1932148331}
   canvas: {fileID: 1297917334}
   pocion: {fileID: 1704120899}

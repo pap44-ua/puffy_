@@ -11,7 +11,16 @@ public class ComprarRopa : MonoBehaviour
 
     void OnMouseDown()
     {
-        sumarCantidad();
+        if(CheckEnoughCoins())
+        {
+            sumarCantidad();
+        }
+        
+    }
+        bool CheckEnoughCoins()
+    {
+        int currentCoins = PlayerPrefs.GetInt("Coins", 0);
+        return currentCoins >= pocionCost;
     }
 
     private void sumarCantidad()
