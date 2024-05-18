@@ -14,14 +14,14 @@ public class CompraComida : MonoBehaviour
         if (audioSource != null)
         {
             if(CheckEnoughCoins())
+            {
             // Reproducir el sonido
             audioSource.Play();
             // Restar el costo de la comida de las monedas
             RestarMonedas();
-
+            }
         }
         sumarCantidad();
-
     }
 
     bool CheckEnoughCoins()
@@ -98,9 +98,6 @@ public class CompraComida : MonoBehaviour
         {
             // Resta el costo de la comida de las monedas usando el m�todo BuyObject del CoinManager
             coinManager.BuyObject(comidaCost);
-        }
-        else
-        {
         }
     }
 

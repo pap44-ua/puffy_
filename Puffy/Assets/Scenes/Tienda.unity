@@ -584,7 +584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 9
-  error: {fileID: 0}
 --- !u!1 &165170502
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +948,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 50
-  error: {fileID: 0}
 --- !u!1 &176196029
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176196030}
   - component: {fileID: 176196033}
+  - component: {fileID: 176196034}
   - component: {fileID: 176196032}
   - component: {fileID: 176196031}
   m_Layer: 5
@@ -1096,7 +1095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 8
-  error: {fileID: 0}
 --- !u!61 &176196033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1142,6 +1140,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &176196034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176196029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &191461279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194173686}
   - component: {fileID: 194173689}
+  - component: {fileID: 194173690}
   - component: {fileID: 194173688}
   - component: {fileID: 194173687}
   m_Layer: 5
@@ -1438,7 +1449,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 12
-  error: {fileID: 0}
 --- !u!61 &194173689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1484,6 +1494,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &194173690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194173685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &195611522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372467041}
   - component: {fileID: 372467044}
+  - component: {fileID: 372467045}
   - component: {fileID: 372467043}
   - component: {fileID: 372467042}
   m_Layer: 5
@@ -2693,7 +2716,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 15
-  error: {fileID: 0}
 --- !u!61 &372467044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2739,6 +2761,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &372467045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372467040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &374373684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3176,7 +3210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 4
-  error: {fileID: 0}
 --- !u!1 &425856124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4729,7 +4762,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 1
-  error: {fileID: 0}
 --- !u!1 &715931330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5081,7 +5113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 11
-  error: {fileID: 0}
 --- !u!1 &811581416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,6 +5170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826882332}
   - component: {fileID: 826882335}
+  - component: {fileID: 826882336}
   - component: {fileID: 826882334}
   - component: {fileID: 826882333}
   m_Layer: 5
@@ -5275,7 +5307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 5
-  error: {fileID: 0}
 --- !u!61 &826882335
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5321,6 +5352,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &826882336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826882331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &830373751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5944,7 +5987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &937037337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6040,6 +6083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962667779}
   - component: {fileID: 962667782}
+  - component: {fileID: 962667783}
   - component: {fileID: 962667781}
   - component: {fileID: 962667780}
   m_Layer: 5
@@ -6176,7 +6220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 9
-  error: {fileID: 0}
 --- !u!61 &962667782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6222,6 +6265,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &962667783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962667778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &967670220
 GameObject:
   m_ObjectHideFlags: 0
@@ -6413,7 +6468,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 7
-  error: {fileID: 0}
 --- !u!1 &969953836
 GameObject:
   m_ObjectHideFlags: 0
@@ -6558,6 +6612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998476308}
   - component: {fileID: 998476311}
+  - component: {fileID: 998476312}
   - component: {fileID: 998476310}
   - component: {fileID: 998476309}
   m_Layer: 5
@@ -6694,7 +6749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 3
-  error: {fileID: 0}
 --- !u!61 &998476311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6740,6 +6794,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &998476312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998476307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1054110703
 GameObject:
   m_ObjectHideFlags: 0
@@ -7156,7 +7222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 2
-  error: {fileID: 0}
 --- !u!1 &1137575818
 GameObject:
   m_ObjectHideFlags: 0
@@ -7242,8 +7307,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1154111437}
   - component: {fileID: 1154111440}
-  - component: {fileID: 1154111443}
   - component: {fileID: 1154111439}
+  - component: {fileID: 1154111443}
   - component: {fileID: 1154111441}
   - component: {fileID: 1154111442}
   m_Layer: 0
@@ -7380,7 +7445,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 1000
-  error: {fileID: 0}
 --- !u!82 &1154111442
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7720,7 +7784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1246787458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7980,7 +8044,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 500
-  error: {fileID: 0}
 --- !u!61 &1277239377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8036,6 +8099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298365076}
   - component: {fileID: 1298365079}
+  - component: {fileID: 1298365080}
   - component: {fileID: 1298365078}
   - component: {fileID: 1298365077}
   m_Layer: 5
@@ -8172,7 +8236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 6
-  error: {fileID: 0}
 --- !u!61 &1298365079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8218,6 +8281,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1298365080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298365075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1336227099
 GameObject:
   m_ObjectHideFlags: 0
@@ -8678,6 +8753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399339885}
   - component: {fileID: 1399339888}
+  - component: {fileID: 1399339889}
   - component: {fileID: 1399339887}
   - component: {fileID: 1399339886}
   m_Layer: 5
@@ -8814,7 +8890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 13
-  error: {fileID: 0}
 --- !u!61 &1399339888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8860,6 +8935,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1399339889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399339884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1448800284
 GameObject:
   m_ObjectHideFlags: 0
@@ -8870,6 +8957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448800285}
   - component: {fileID: 1448800288}
+  - component: {fileID: 1448800289}
   - component: {fileID: 1448800287}
   - component: {fileID: 1448800286}
   m_Layer: 5
@@ -9006,7 +9094,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 7
-  error: {fileID: 0}
 --- !u!61 &1448800288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9052,6 +9139,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1448800289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448800284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1449374194
 GameObject:
   m_ObjectHideFlags: 0
@@ -9062,6 +9161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449374195}
   - component: {fileID: 1449374198}
+  - component: {fileID: 1449374199}
   - component: {fileID: 1449374197}
   - component: {fileID: 1449374196}
   m_Layer: 5
@@ -9198,7 +9298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 14
-  error: {fileID: 0}
 --- !u!61 &1449374198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9244,6 +9343,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1449374199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449374194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1469599806
 GameObject:
   m_ObjectHideFlags: 0
@@ -9749,8 +9860,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1530857213}
   - component: {fileID: 1530857216}
-  - component: {fileID: 1530857219}
   - component: {fileID: 1530857215}
+  - component: {fileID: 1530857219}
   - component: {fileID: 1530857217}
   - component: {fileID: 1530857218}
   m_Layer: 0
@@ -9887,7 +9998,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 250
-  error: {fileID: 0}
 --- !u!82 &1530857218
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10325,7 +10435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 12
-  error: {fileID: 0}
 --- !u!1 &1562605045
 GameObject:
   m_ObjectHideFlags: 0
@@ -10336,8 +10445,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1562605046}
   - component: {fileID: 1562605049}
-  - component: {fileID: 1562605053}
   - component: {fileID: 1562605048}
+  - component: {fileID: 1562605053}
   - component: {fileID: 1562605050}
   - component: {fileID: 1562605051}
   - component: {fileID: 1562605052}
@@ -10475,7 +10584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 50
-  error: {fileID: 0}
 --- !u!82 &1562605051
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10610,6 +10718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1573350380}
   - component: {fileID: 1573350383}
+  - component: {fileID: 1573350384}
   - component: {fileID: 1573350382}
   - component: {fileID: 1573350381}
   m_Layer: 5
@@ -10746,7 +10855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 10
-  error: {fileID: 0}
 --- !u!61 &1573350383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10792,6 +10900,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1573350384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573350379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1589866670
 GameObject:
   m_ObjectHideFlags: 0
@@ -11541,7 +11661,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 5
-  error: {fileID: 0}
 --- !u!1 &1740167797
 GameObject:
   m_ObjectHideFlags: 0
@@ -11903,6 +12022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766476411}
   - component: {fileID: 1766476414}
+  - component: {fileID: 1766476415}
   - component: {fileID: 1766476413}
   - component: {fileID: 1766476412}
   m_Layer: 5
@@ -12039,7 +12159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 11
-  error: {fileID: 0}
 --- !u!61 &1766476414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12085,6 +12204,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1766476415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766476410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777545048
 GameObject:
   m_ObjectHideFlags: 0
@@ -12834,6 +12965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835193039}
   - component: {fileID: 1835193042}
+  - component: {fileID: 1835193043}
   - component: {fileID: 1835193041}
   - component: {fileID: 1835193040}
   m_Layer: 5
@@ -12970,7 +13102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 4
-  error: {fileID: 0}
 --- !u!61 &1835193042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13016,6 +13147,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1835193043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835193038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858785039
 GameObject:
   m_ObjectHideFlags: 0
@@ -13835,6 +13978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909733829}
   - component: {fileID: 1909733832}
+  - component: {fileID: 1909733833}
   - component: {fileID: 1909733831}
   - component: {fileID: 1909733830}
   m_Layer: 5
@@ -13971,7 +14115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 2
-  error: {fileID: 0}
 --- !u!61 &1909733832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14017,6 +14160,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &1909733833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909733828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1929860306
 GameObject:
   m_ObjectHideFlags: 0
@@ -14611,7 +14766,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 6
-  error: {fileID: 0}
 --- !u!1 &2001312029
 GameObject:
   m_ObjectHideFlags: 0
@@ -14803,7 +14957,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 8
-  error: {fileID: 0}
 --- !u!1 &2009802803
 GameObject:
   m_ObjectHideFlags: 0
@@ -14951,7 +15104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 175
-  error: {fileID: 0}
 --- !u!82 &2009802809
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15058,6 +15210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025215689}
   - component: {fileID: 2025215692}
+  - component: {fileID: 2025215693}
   - component: {fileID: 2025215691}
   - component: {fileID: 2025215690}
   m_Layer: 5
@@ -15194,7 +15347,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 1
-  error: {fileID: 0}
 --- !u!61 &2025215692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15240,6 +15392,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7864726, y: 1.5019461}
   m_EdgeRadius: 0
+--- !u!114 &2025215693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025215688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2d3314e1352104487dc362079e5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031279095
 GameObject:
   m_ObjectHideFlags: 0
@@ -15567,7 +15731,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 10
-  error: {fileID: 0}
 --- !u!1 &2070921945
 GameObject:
   m_ObjectHideFlags: 0
@@ -16322,7 +16485,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   comidaCost: 3
-  error: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
