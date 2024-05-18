@@ -11,14 +11,6 @@ public class ComprarRopa : MonoBehaviour
 
     void OnMouseDown()
     {
-        // Verificar si se ha asignado un AudioSource y si el objeto es visible
-        if (audioSource != null)
-        {
-            // Reproducir el sonido
-            audioSource.Play();
-            // Restar el costo de la comida de las monedas
-            RestarMonedas();
-        }
         sumarCantidad();
     }
 
