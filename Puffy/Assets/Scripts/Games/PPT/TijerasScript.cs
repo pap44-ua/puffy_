@@ -23,6 +23,10 @@ public class ElementoScript : MonoBehaviour
     public GameObject jugarButton;
     public GameObject volverButton;
 
+    public AudioSource audioSource;
+    public AudioClip victoriaClip;
+    public AudioClip derrotaClip;
+
 
     void OnMouseDown()
     {
@@ -130,10 +134,12 @@ public class ElementoScript : MonoBehaviour
         if ((jugadorPiedra && maquinaTijeras) || (jugadorPapel && maquinaPiedra) || (jugadorTijeras && maquinaPapel))
         {
             victoria.SetActive(true);
+            audioSource.PlayOneShot(victoriaClip);
         }
         else if ((jugadorPiedra && maquinaPapel) || (jugadorPapel && maquinaTijeras) || (jugadorTijeras && maquinaPiedra))
         {
             derrota.SetActive(true);
+            audioSource.PlayOneShot(derrotaClip);
         }
         else
         {
