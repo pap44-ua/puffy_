@@ -19,7 +19,7 @@ public class juegos : MonoBehaviour
             SceneManager.LoadScene("PPT_MainMenu");
         }
         else if(gameObject == memoria){
-            Debug.Log("Ha elegido memoria");
+            SceneManager.LoadScene("Parejas");
         }
         else if(gameObject == tresRaya){
             SceneManager.LoadScene("Tres_en_raya");
