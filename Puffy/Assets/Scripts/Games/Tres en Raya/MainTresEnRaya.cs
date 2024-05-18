@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
@@ -6,35 +7,36 @@ using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public GameObject Boton00, Boton01, Boton02, Boton10, Boton11, Boton12, Boton20, Boton21, Boton22;
+    public GameObject Boton00, Boton01, Boton02, Boton10, Boton11, Boton12, Boton20, Boton21, Boton22, BotonIA, BotonHumano;
     public GameObject Jugador1_00, Jugador1_01, Jugador1_02, Jugador1_10, Jugador1_11, Jugador1_12, Jugador1_20, Jugador1_21, Jugador1_22;
     public GameObject Jugador2_00, Jugador2_01, Jugador2_02, Jugador2_10, Jugador2_11, Jugador2_12, Jugador2_20, Jugador2_21, Jugador2_22;
-    public GameObject BotonJugar, BotonSalir, FinJuego, Jugador1, Jugador2, MensajeGanador;
+    public GameObject BotonJugar, BotonSalir, FinJuego, Jugador1, Jugador2, MensajeGanador, Inicio;
     private int turno, ganador;
-
+    private int enemigo;
     // Start is called before the first frame update
     void Start()
     {
         turno = 1;
         ganador = 0;
-        
+        enemigo = -1;
         BotonJugar.SetActive(false);
         BotonSalir.SetActive(false);
         FinJuego.SetActive(false);
         Jugador1.SetActive(false);
         Jugador2.SetActive(false);
         MensajeGanador.SetActive(false);
-
-        Boton00.SetActive(true);
-        Boton01.SetActive(true);
-        Boton02.SetActive(true); 
-        Boton10.SetActive(true); 
-        Boton11.SetActive(true); 
-        Boton12.SetActive(true); 
-        Boton20.SetActive(true); 
-        Boton21.SetActive(true); 
-        Boton22.SetActive(true);
-
+        Inicio.SetActive(true);
+        Boton00.SetActive(false);
+        Boton01.SetActive(false);
+        Boton02.SetActive(false);
+        Boton10.SetActive(false);
+        Boton11.SetActive(false);
+        Boton12.SetActive(false);
+        Boton20.SetActive(false);
+        Boton21.SetActive(false);
+        Boton22.SetActive(false);
+        BotonIA.SetActive(true);
+        BotonHumano.SetActive(true);
     
         Jugador1_00.SetActive(false); 
         Jugador1_01.SetActive(false); 
@@ -71,6 +73,12 @@ public class NewBehaviourScript : MonoBehaviour
             BotonSalir.SetActive(true);
             BotonJugar.SetActive(true);
             MensajeGanador.SetActive(true);
+        }
+        if(enemigo == 0 && turno == 2)
+        {
+            colocarFichaIA();
+            siguienteTurno();
+            comprobarGanador();
         }
     }
 
@@ -136,6 +144,55 @@ public class NewBehaviourScript : MonoBehaviour
         if(ganador!=0)
         {
 
+        }
+    }
+
+    private void colocarFichaIA()
+    {
+        if (Boton00.activeSelf)
+        {
+            Jugador2_00.SetActive(true);
+            Boton00.SetActive(false);
+        }
+        else if (Boton01.activeSelf)
+        {
+            Jugador2_01.SetActive(true);
+            Boton01.SetActive(false);
+        }
+        else if (Boton02.activeSelf)
+        {
+            Jugador2_01.SetActive(true);
+            Boton02.SetActive(false);
+        }
+        else if (Boton10.activeSelf)
+        {
+            Jugador2_10.SetActive(true);
+            Boton10.SetActive(false);
+        }
+        else if (Boton11.activeSelf)
+        {
+            Jugador2_11.SetActive(true);
+            Boton11.SetActive(false);
+        }
+        else if (Boton12.activeSelf)
+        {
+            Jugador2_12.SetActive(true);
+            Boton12.SetActive(false);   
+        }
+        else if (Boton20.activeSelf)
+        {
+            Jugador2_20.SetActive(true);
+            Boton20.SetActive(false);
+        }
+        else if (Boton21.activeSelf)
+        {
+            Jugador2_21.SetActive(true);
+            Boton21.SetActive(false);
+        }
+        else
+        {
+            Jugador2_22.SetActive(true);
+            Boton22.SetActive(false);
         }
     }
 
@@ -235,6 +292,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (!Jugador1_20.activeSelf && !Jugador2_20.activeSelf)
         {
+
             if (turno == 1)
                 Jugador1_20.SetActive(true);
             else
@@ -263,28 +321,30 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (!Jugador1_22.activeSelf && !Jugador2_22.activeSelf)
         {
-            if (turno == 1)
-                Jugador1_22.SetActive(true);
-            else
-                Jugador2_22.SetActive(true);
-            Boton22.SetActive(false);
-            siguienteTurno();
+                if (turno == 1)
+                    Jugador1_22.SetActive(true);
+                else
+                    Jugador2_22.SetActive(true);
+                Boton22.SetActive(false);
+                siguienteTurno();
         }
         comprobarGanador();
     }
 
-    public void volverAJugar()
+    static int GenerarAleatorio(int semilla)
     {
-        turno = 1;
-        ganador = 0;
+        return (7919 * semilla + 104729) % 2855981;
+    }
 
-        BotonJugar.SetActive(false);
-        BotonSalir.SetActive(false);
-        FinJuego.SetActive(false);
-        Jugador1.SetActive(false);
-        Jugador2.SetActive(false);
-        MensajeGanador.SetActive(false);
-
+    public void BotonIAClick()
+    {
+        DateTime ahora = DateTime.Now;
+        int semilla = ahora.Millisecond;
+        Inicio.SetActive(false);
+        BotonHumano.SetActive(false);
+        BotonIA.SetActive(false);
+        enemigo = 0;
+        turno = GenerarAleatorio(semilla) % 2 +1;
         Boton00.SetActive(true);
         Boton01.SetActive(true);
         Boton02.SetActive(true);
@@ -294,7 +354,48 @@ public class NewBehaviourScript : MonoBehaviour
         Boton20.SetActive(true);
         Boton21.SetActive(true);
         Boton22.SetActive(true);
+    }
 
+    public void BotonHumanoClick()
+    {
+        Inicio.SetActive(false);
+        BotonHumano.SetActive(false );
+        BotonIA.SetActive(false);
+        enemigo = 1;
+        Boton00.SetActive(true);
+        Boton01.SetActive(true);
+        Boton02.SetActive(true);
+        Boton10.SetActive(true);
+        Boton11.SetActive(true);
+        Boton12.SetActive(true);
+        Boton20.SetActive(true);
+        Boton21.SetActive(true);
+        Boton22.SetActive(true);
+    }
+
+    public void volverAJugar()
+    {
+        turno = 1;
+        ganador = 0;
+        enemigo = -1;
+        BotonJugar.SetActive(false);
+        BotonSalir.SetActive(false);
+        FinJuego.SetActive(false);
+        Jugador1.SetActive(false);
+        Jugador2.SetActive(false);
+        MensajeGanador.SetActive(false);
+        Inicio.SetActive(true);
+        Boton00.SetActive(false);
+        Boton01.SetActive(false);
+        Boton02.SetActive(false);
+        Boton10.SetActive(false);
+        Boton11.SetActive(false);
+        Boton12.SetActive(false);
+        Boton20.SetActive(false);
+        Boton21.SetActive(false);
+        Boton22.SetActive(false);
+        BotonIA.SetActive(true);
+        BotonHumano.SetActive(true);
 
         Jugador1_00.SetActive(false);
         Jugador1_01.SetActive(false);
