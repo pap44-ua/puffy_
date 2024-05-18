@@ -13,15 +13,21 @@ public class CompraComida : MonoBehaviour
         // Verificar si se ha asignado un AudioSource y si el objeto es visible
         if (audioSource != null)
         {
-
+            if(CheckEnoughCoins())
+            {
             // Reproducir el sonido
             audioSource.Play();
             // Restar el costo de la comida de las monedas
             RestarMonedas();
-
+            }
         }
         sumarCantidad();
+    }
 
+    bool CheckEnoughCoins()
+    {
+        int currentCoins = PlayerPrefs.GetInt("Coins", 0);
+        return currentCoins >= comidaCost;
     }
 
 
@@ -92,9 +98,6 @@ public class CompraComida : MonoBehaviour
         {
             // Resta el costo de la comida de las monedas usando el m�todo BuyObject del CoinManager
             coinManager.BuyObject(comidaCost);
-        }
-        else
-        {
         }
     }
 
