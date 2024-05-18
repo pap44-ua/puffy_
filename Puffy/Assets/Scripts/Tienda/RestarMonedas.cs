@@ -8,18 +8,17 @@ public class RestarMonedas : MonoBehaviour
     public TMP_Text coinsText; // Referencia al componente TextMeshPro que muestra las monedas
     public int initialCoins = 1500; // Valor inicial de las monedas
 
-    private int coins; // Variable para almacenar el número de monedas
+    private int coins; // Variable para almacenar el nï¿½mero de monedas
 
     void Start()
     {
-        // Intenta cargar el número de monedas desde PlayerPrefs
+        // Intenta cargar el nï¿½mero de monedas desde PlayerPrefs
         coins = PlayerPrefs.GetInt("Coins", initialCoins);
-
         // Actualiza el texto del componente TextMeshPro con el valor inicial o cargado de las monedas
         UpdateCoinsText();
     }
 
-    // Método para comprar un objeto. Recibe el costo del objeto como parámetro.
+    // Mï¿½todo para comprar un objeto. Recibe el costo del objeto como parï¿½metro.
     public void BuyObject(int objectCost)
     {
         // Verifica si tienes suficientes monedas para comprar el objeto
@@ -41,13 +40,13 @@ public class RestarMonedas : MonoBehaviour
         }
     }
 
-    // Método para actualizar el texto del componente TextMeshPro con el valor actual de las monedas
+    // Mï¿½todo para actualizar el texto del componente TextMeshPro con el valor actual de las monedas
     void UpdateCoinsText()
     {
         coinsText.text = "x" + coins.ToString();
     }
 
-    // Método para restablecer el valor de las monedas a su valor inicial
+    // Mï¿½todo para restablecer el valor de las monedas a su valor inicial
     public void ResetCoins()
     {
         coins = initialCoins;

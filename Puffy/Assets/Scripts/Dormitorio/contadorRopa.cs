@@ -47,7 +47,7 @@ public class contadorRopa : MonoBehaviour
                 cantidad = Armario.cantidadPantalonesRojos;
                 stringRopa = "cantidadPantalonesRojos";
                 break;
-            case "pantalones_lila":
+            case "pantalones_lilas":
                 Armario.cantidadPantalonesLilas = PlayerPrefs.GetInt("cantidadPantalonesLilas");
                 cantidad = Armario.cantidadPantalonesLilas;
                 stringRopa = "cantidadPantalonesLilas";
