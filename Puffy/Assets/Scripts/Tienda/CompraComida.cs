@@ -19,9 +19,11 @@ public class CompraComida : MonoBehaviour
             audioSource.Play();
             // Restar el costo de la comida de las monedas
             RestarMonedas();
+
+            sumarCantidad();
             }
         }
-        sumarCantidad();
+        
     }
 
     bool CheckEnoughCoins()
@@ -29,8 +31,6 @@ public class CompraComida : MonoBehaviour
         int currentCoins = PlayerPrefs.GetInt("Coins", 0);
         return currentCoins >= comidaCost;
     }
-
-
 
     private void sumarCantidad()
     {

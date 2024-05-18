@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class CompraPociones : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public int pocionCost = 50; // Costo de la comida
-
+    public int comidaCost;
+    
     void OnMouseDown()
     {
-        // Verificar si se ha asignado un AudioSource y si el objeto es visible
-        if (audioSource != null)
+        if(CheckEnoughCoins())
         {
-            // Reproducir el sonido
-            audioSource.Play();
-            // Restar el costo de la comida de las monedas
-            RestarMonedas();
+            sumarCantidad();
         }
-        sumarCantidad();
+    }
 
+     bool CheckEnoughCoins()
+    {
+        int currentCoins = PlayerPrefs.GetInt("Coins", 0);
+        return currentCoins >= comidaCost;
     }
 
     private void sumarCantidad()
@@ -28,7 +27,7 @@ public class CompraPociones : MonoBehaviour
             case "PocionDiversion":
                ArmarioPociones.cantidadPocionDiversion++;
                PlayerPrefs.SetInt("cantidadPocionDiversion", ArmarioPociones.cantidadPocionDiversion);
-                break;
+               break;
             case "PocionSalud":
                 ArmarioPociones.cantidadPocionSalud++;
                 PlayerPrefs.SetInt("cantidadPocionSalud", ArmarioPociones.cantidadPocionSalud);
@@ -45,36 +44,12 @@ public class CompraPociones : MonoBehaviour
         }
     }
 
-    // M�todo para verificar si el objeto es visible en la c�mara
-
-
-    // M�todo para restar el costo de la comida de las monedas
-    void RestarMonedas()
-    {
-        // Busca el objeto CoinManager en la escena
-        RestarMonedas coinManager = FindObjectOfType<RestarMonedas>();
-
-        // Verifica si se encontr� el CoinManager
-        if (coinManager != null)
-        {
-            // Resta el costo de la comida de las monedas usando el m�todo BuyObject del CoinManager
-            coinManager.BuyObject(pocionCost);
-        }
-        else
-        {
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        if (audioSource == null)
-            audioSource = GetComponent<AudioSource>();
     }
-
     // Update is called once per frame
     void Update()
     {
-
     }
 }

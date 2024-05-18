@@ -1790,7 +1790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &282710854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,7 +1906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &299642845
 Transform:
   m_ObjectHideFlags: 0
@@ -5858,7 +5858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &937037337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7353,8 +7353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  pocionCost: 50
+  comidaCost: 1000
 --- !u!1 &1235118349
 GameObject:
   m_ObjectHideFlags: 0
@@ -9723,8 +9722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  pocionCost: 50
+  comidaCost: 250
 --- !u!1 &1559774825
 GameObject:
   m_ObjectHideFlags: 0
@@ -10066,7 +10064,6 @@ GameObject:
   - component: {fileID: 1562605053}
   - component: {fileID: 1562605050}
   - component: {fileID: 1562605051}
-  - component: {fileID: 1562605052}
   m_Layer: 0
   m_Name: PocionSalud
   m_TagString: Untagged
@@ -10297,20 +10294,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1562605052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562605045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  pocionCost: 50
 --- !u!114 &1562605053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10323,8 +10306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  pocionCost: 50
+  comidaCost: 50
 --- !u!1 &1573350379
 GameObject:
   m_ObjectHideFlags: 0
@@ -14593,6 +14575,7 @@ GameObject:
   - component: {fileID: 2009802804}
   - component: {fileID: 2009802807}
   - component: {fileID: 2009802806}
+  - component: {fileID: 2009802810}
   - component: {fileID: 2009802808}
   - component: {fileID: 2009802809}
   m_Layer: 0
@@ -14825,6 +14808,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2009802810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009802803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c44aa7319907b14b876ae92a0a804d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comidaCost: 175
 --- !u!1 &2025215688
 GameObject:
   m_ObjectHideFlags: 0
