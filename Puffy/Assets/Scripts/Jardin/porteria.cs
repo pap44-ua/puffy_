@@ -4,6 +4,7 @@ public class porteria : MonoBehaviour
 {
     private int coins;
     public AudioSource sonido;
+    public LinearIndicator diversion;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class porteria : MonoBehaviour
 
         if (other.CompareTag("Pelota"))
         {
+            diversion.SetValue(diversion.GetValue() + 5);
             if(sonido != null)
             {
                 sonido.Play();
