@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExampleScriptLinearIndicator : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
         energia.SetupIndicator(0, 100);
         salud.SetupIndicator(0, 100);
         diversion.SetupIndicator(0, 100);
+
+
         if (!PlayerPrefs.HasKey("Diversion") && !PlayerPrefs.HasKey("Comida") && !PlayerPrefs.HasKey("Energia") && !PlayerPrefs.HasKey("Salud"))
         {
             PlayerPrefs.SetInt("Comida", 10);
@@ -53,6 +56,12 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        if(comida.GetValue()==0 && diversion.GetValue()==0 && salud.GetValue()==0 && energia.GetValue()==0)
+        {
+            SceneManager.LoadScene("Muerto");
+        }
+
         if(comida.GetValue() != PlayerPrefs.GetInt("Comida"))
             PlayerPrefs.SetInt("Comida", (int) comida.GetValue());
         
