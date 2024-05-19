@@ -9,7 +9,7 @@ using TMPro;
 public class MainAhorcado : MonoBehaviour
 {
     //Partes Cuerpo
-    public GameObject orejaDerecha, orejaIzquierda, cuerpo, brazoDerecho, brazoIzquierdo, piernaIzquierda, piernaDerecha;
+    public GameObject inicio, segundo, tercero, cuarto, quinto, sexto, septimo, octavo;
 
     //Recuadros
     public GameObject recuadroFalladas, recuadroPalabra, recuadroTeclado;
@@ -29,13 +29,13 @@ public class MainAhorcado : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        orejaDerecha.SetActive(true);
-        orejaIzquierda.SetActive(true);
-        cuerpo.SetActive(true);
-        brazoDerecho.SetActive(true);
-        brazoIzquierdo.SetActive(true);
-        piernaIzquierda.SetActive(true);
-        piernaDerecha.SetActive(true);
+        inicio.SetActive(true);
+        segundo.SetActive(false);
+        tercero.SetActive(false);
+        cuarto.SetActive(false);
+        quinto.SetActive(false);
+        sexto.SetActive(false);
+        septimo.SetActive(false);
 
         recuadroFalladas.SetActive(true);
         recuadroPalabra.SetActive(true);
@@ -188,29 +188,35 @@ public class MainAhorcado : MonoBehaviour
 
     public void quitarParteCuerpo()
     {
-        if (orejaDerecha.activeSelf)
+        if (inicio.activeSelf)
         {
-            orejaDerecha.SetActive(false);
+            inicio.SetActive(false);
+            segundo.SetActive(true);
         }
-        else if (orejaIzquierda.activeSelf)
+        else if (segundo.activeSelf)
         {
-            orejaIzquierda.SetActive(false);
+            segundo.SetActive(false);
+            tercero.SetActive(true);
         }
-        else if (brazoDerecho.activeSelf)
+        else if (tercero.activeSelf)
         {
-            brazoDerecho.SetActive(false);
+            tercero.SetActive(false);
+            cuarto.SetActive(true);
         }
-        else if (brazoIzquierdo.activeSelf)
+        else if (cuarto.activeSelf)
         {
-            brazoIzquierdo.SetActive(false);
+            cuarto.SetActive(false);
+            quinto.SetActive(true);
         }
-        else if (piernaIzquierda.activeSelf)
+        else if (quinto.activeSelf)
         {
-            piernaIzquierda.SetActive(false);
+            quinto.SetActive(false);
+            sexto.SetActive(true);
         }
-        else if (piernaDerecha.activeSelf)
+        else if (sexto.activeSelf)
         {
-            piernaDerecha.SetActive(false);
+            sexto.SetActive(false);
+            septimo.SetActive(true);
         }
         else
         {

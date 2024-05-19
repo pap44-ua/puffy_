@@ -13,9 +13,11 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject BotonJugar, BotonSalir, FinJuego, Jugador1, Jugador2, MensajeGanador, Inicio;
     private int turno, ganador;
     private int enemigo;
+    private double ganadas; 
     // Start is called before the first frame update
     void Start()
     {
+        ganadas = 0;
         turno = 1;
         ganador = 0;
         enemigo = -1;
@@ -143,7 +145,9 @@ public class NewBehaviourScript : MonoBehaviour
 
         if(ganador!=0)
         {
-
+            if (ganador == 2)
+                ganadas++;
+            else ganadas += 0.5;
         }
     }
 
@@ -416,5 +420,10 @@ public class NewBehaviourScript : MonoBehaviour
         Jugador2_20.SetActive(false);
         Jugador2_21.SetActive(false);
         Jugador2_22.SetActive(false);
+    }
+    
+    public void botonSalir()
+    {
+        SceneManager.LoadScene("Jardin");
     }
 }
