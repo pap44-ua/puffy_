@@ -8,6 +8,7 @@ public class quitarBurbujas : MonoBehaviour
     public GameObject jabon;
     public GameObject burbujaInstanciada; 
     bool mostrarBurbujas = false;
+    public LinearIndicator salud;
 
    public void OcultarBurbujas()
     {
@@ -25,7 +26,7 @@ public class quitarBurbujas : MonoBehaviour
         {
             burbujaInstanciada.SetActive(mostrarBurbujas);
         }
-
+        salud.SetValue(salud.GetValue() + 10);
         if (audio != null)
         {
             audio.Play();

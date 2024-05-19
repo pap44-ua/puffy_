@@ -8,12 +8,16 @@ public class clickJabon : MonoBehaviour
     public bool jabon;
     public GameObject prefabBurbujas;
     private Animator animacionBurbujas;
+    public LinearIndicator salud;
 
     public void MostrarBurbujas()
     {
         //GameObject burbujaInstanciada = Instantiate(prefabBurbujas, transform.position, Quaternion.identity);
         prefabBurbujas.SetActive(true);
-        if(audio != null)
+        salud.SetValue(salud.GetValue() + 10);
+
+
+        if (audio != null)
         {
             audio.Play();
         }
