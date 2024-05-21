@@ -16,6 +16,7 @@ public class Parejas_MM : MonoBehaviour
     public List<Sprite> cardImages; // Lista de imágenes de las cartas
 
     public AudioClip flipSound; // Sonido de volteo de cartas
+    public AudioClip moneySound; // Sonido de ganar monedas
     private AudioSource audioSource;
 
     void Start()
@@ -36,6 +37,9 @@ public class Parejas_MM : MonoBehaviour
 
         audioSource = gameObject.AddComponent<AudioSource>();
         flipSound = Resources.Load<AudioClip>("cartas");
+        moneySound = Resources.Load<AudioClip>("monedas");
+
+        audioSource.clip = moneySound;
         audioSource.clip = flipSound;
     }
 

@@ -21,10 +21,14 @@ public class Card : MonoBehaviour
     private bool adivinada = false; // Indica si la carta ya fue adivinada
 
     public AudioClip flipSound; // Sonido de volteo de cartas
+    public AudioClip moneySound; // Sonido de ganar monedas
     public AudioSource audioSource;
+
+    private int monedas;
 
     void Start()
     {
+        monedas = PlayerPrefs.GetInt("Coins",0);
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = gameObject.AddComponent<AudioSource>();
         Flip(); // Voltea la carta al inicio para mostrar su parte trasera
@@ -37,6 +41,7 @@ public class Card : MonoBehaviour
         finalImages.Add(Resources.Load<Sprite>("F4")); //Reiniciar
 
         flipSound = Resources.Load<AudioClip>("cartas");
+        moneySound = Resources.Load<AudioClip>("monedas");
         audioSource.clip = flipSound;
 
     }
@@ -142,8 +147,18 @@ public class Card : MonoBehaviour
         }
     }
 
+     private void PlayMoneySound()
+    {
+        if (moneySound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(moneySound);
+        }
+    }
+
     public void final()
     {
+        monedas = monedas + 10;
+        PlayerPrefs.SetInt("Coins", monedas);
 
         Sprite spriteACrear = finalImages[0];
         GameObject fin = new GameObject("Cuadro");
