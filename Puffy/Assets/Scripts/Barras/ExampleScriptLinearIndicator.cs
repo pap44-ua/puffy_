@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class ExampleScriptLinearIndicator : MonoBehaviour
 {
@@ -56,6 +57,22 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!PlayerPrefs.HasKey("UltimaHora")){
+            DateTime n = DateTime.Now;
+            float r = n.Day * 86400 + n.Hour * 3600 + n.Minute * 60 + n.Second;
+            PlayerPrefs.SetFloat("UltimaHora", r);
+        }
+        else{
+            DateTime n = DateTime.Now;
+            float r = n.Day * 86400 + n.Hour * 3600 + n.Minute * 60 + n.Second;
+            float antes = PlayerPrefs.GetFloat("UltimaHora");
+            float k = r - antes;
+
+            if(k % 3600 >= 1)
+            {
+
+            }
+        }
 
         if(comida.GetValue()==0 && diversion.GetValue()==0 && salud.GetValue()==0 && energia.GetValue()==0)
         {

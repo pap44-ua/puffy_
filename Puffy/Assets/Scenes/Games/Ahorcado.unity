@@ -3871,6 +3871,9 @@ MonoBehaviour:
   botonSalir: {fileID: 1533295480}
   volverJugar: {fileID: 1918089166}
   mensajeFinal: {fileID: 472248243}
+  ganado: {fileID: 8300000, guid: d1171b7c56909d34cb7c21623e395481, type: 3}
+  perdido: {fileID: 8300000, guid: 3c6d364c877ff7140ab45e1e0b8a7afd, type: 3}
+  a: {fileID: 0}
   letrasUsadas: {fileID: 1928324555}
   palabraAcertando: {fileID: 1266194671}
   letraA: {fileID: 128734357}

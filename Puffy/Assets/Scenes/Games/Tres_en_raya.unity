@@ -8340,6 +8340,9 @@ MonoBehaviour:
   Jugador2: {fileID: 1068436699}
   MensajeGanador: {fileID: 1754536568}
   Inicio: {fileID: 169718034}
+  ganado: {fileID: 8300000, guid: d1171b7c56909d34cb7c21623e395481, type: 3}
+  perdido: {fileID: 8300000, guid: 3c6d364c877ff7140ab45e1e0b8a7afd, type: 3}
+  a: {fileID: 0}
 --- !u!1 &1727106844
 GameObject:
   m_ObjectHideFlags: 0
@@ -9844,6 +9847,9 @@ MonoBehaviour:
   Jugador2: {fileID: 1068436699}
   MensajeGanador: {fileID: 1754536568}
   Inicio: {fileID: 0}
+  ganado: {fileID: 0}
+  perdido: {fileID: 0}
+  a: {fileID: 0}
 --- !u!1 &1949373499
 GameObject:
   m_ObjectHideFlags: 0

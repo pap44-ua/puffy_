@@ -19,6 +19,9 @@ public class MainAhorcado : MonoBehaviour
     //Recuadro Final Partida
     public GameObject FinPartida, botonSalir, volverJugar, mensajeFinal;
 
+    public AudioClip ganado, perdido;
+    public AudioSource a;
+
     //Textos dinámicos
     public GameObject letrasUsadas, palabraAcertando;
 
@@ -263,6 +266,7 @@ public class MainAhorcado : MonoBehaviour
             mensajeFinal.GetComponent<TextMeshProUGUI>().text = "No has conseguido acertar la palabra :(";
             mensajeFinal.SetActive(true);
             recuadroTeclado.SetActive(false);
+            a.PlayOneShot(perdido);
         }
     }
 
@@ -290,6 +294,7 @@ public class MainAhorcado : MonoBehaviour
             recuadroTeclado.SetActive(false);
             recuadroPalabra.SetActive(false);
             ganadas++;
+            a.PlayOneShot(ganado);
         }
     }
 
