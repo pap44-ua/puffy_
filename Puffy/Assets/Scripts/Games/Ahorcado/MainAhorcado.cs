@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
+using Random = System.Random;
 
 public class MainAhorcado : MonoBehaviour
 {
@@ -20,6 +22,30 @@ public class MainAhorcado : MonoBehaviour
     //Textos dinámicos
     public GameObject letrasUsadas, palabraAcertando;
 
+    string[] palabras = {
+            "elefante", "jirafa", "computadora", "programacion", "auriculares",
+            "microfono", "bicicleta", "ventilador", "automovil", "astronauta",
+            "murcielago", "biblioteca", "refrigerador", "calculadora", "television",
+            "parlante", "escritorio", "ventana", "colegio", "universidad",
+            "examen", "diccionario", "bateria", "camara", "celular",
+            "videojuego", "aplicacion", "inteligencia", "artificial", "algoritmo",
+            "desarrollo", "software", "hardware", "procesador", "memoria",
+            "tarjeta", "madre", "enchufe", "cable", "conector",
+            "puerto", "servidor", "internet", "criptografia", "seguridad",
+            "contraseña", "acceso", "usuario", "administrador", "sistema",
+            "operativo", "windows", "linux", "android", "aplicacion",
+            "juego", "programa", "desarrollador", "ingeniero", "tecnico",
+            "analista", "consultor", "proyecto", "metodologia", "documentacion",
+            "requisito", "integracion", "implementacion", "despliegue", "mantenimiento",
+            "soporte", "actualizacion", "parche", "release", "arquitectura",
+            "framework", "biblioteca", "interfaz", "usuario", "backend",
+            "frontend", "desempeño", "optimización", "rendimiento", "simulación",
+            "virtualización", "criptomoneda", "blockchain", "transacción", "encriptación",
+            "decodificación", "análisis", "compilador", "interpretador", "ejecutable",
+            "secuencia", "concurrencia", "paralelismo", "asincronía", "sincronización",
+            "semaforo", "hilo", "proceso", "tarea", "buffer",
+            "memoria", "caché", "optimización", "compresión", "decompresión"
+        };
     private string palabraElegida = "hola esto es una prueba";
 
     private double ganadas;
@@ -138,6 +164,8 @@ public class MainAhorcado : MonoBehaviour
         letraX.GetComponent<Button>().interactable = true;
         letraY.GetComponent<Button>().interactable = true;
         letraZ.GetComponent<Button>().interactable = true;
+
+        sacarPalabra();
     }
 
     // Update is called once per frame
@@ -146,6 +174,13 @@ public class MainAhorcado : MonoBehaviour
         
     }
 
+    private void sacarPalabra()
+    {
+        Random rand = new Random();
+        int indiceAleatorio = rand.Next(0, palabras.Length);
+        string palabraAleatoria = palabras[indiceAleatorio];
+        palabraElegida = palabraAleatoria;
+    }
     private bool procesarLetra(char i)
     {
         bool primeraLetra = true;
