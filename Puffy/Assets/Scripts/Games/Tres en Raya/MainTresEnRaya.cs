@@ -13,7 +13,7 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject BotonJugar, BotonSalir, FinJuego, Jugador1, Jugador2, MensajeGanador, Inicio;
     private int turno, ganador;
     private int enemigo;
-    private double ganadas; 
+    private int ganadas; 
     // Start is called before the first frame update
     void Start()
     {
@@ -147,7 +147,6 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (ganador == 2)
                 ganadas++;
-            else ganadas += 0.5;
         }
     }
 
@@ -424,6 +423,9 @@ public class NewBehaviourScript : MonoBehaviour
     
     public void botonSalir()
     {
+        int monedas = PlayerPrefs.GetInt("Coins");
+        monedas += (ganadas * 2);
+        PlayerPrefs.SetInt("Coins", monedas);
         SceneManager.LoadScene("Jardin");
     }
 }

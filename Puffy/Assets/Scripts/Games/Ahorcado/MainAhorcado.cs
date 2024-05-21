@@ -48,7 +48,7 @@ public class MainAhorcado : MonoBehaviour
         };
     private string palabraElegida = "hola esto es una prueba";
 
-    private double ganadas;
+    private int ganadas;
 
 
     //BotonesTeclado
@@ -262,7 +262,6 @@ public class MainAhorcado : MonoBehaviour
             volverJugar.SetActive(true);
             mensajeFinal.GetComponent<TextMeshProUGUI>().text = "No has conseguido acertar la palabra :(";
             mensajeFinal.SetActive(true);
-
             recuadroTeclado.SetActive(false);
         }
     }
@@ -739,6 +738,8 @@ public class MainAhorcado : MonoBehaviour
         sexto.SetActive(false);
         septimo.SetActive(false);
         recuadroTeclado.SetActive(true);
+        recuadroPalabra.SetActive(true);
+        recuadroLetras.SetActive(true);
 
         palabraElegida.ToUpper();
         letrasUsadas.SetActive(true);
@@ -835,12 +836,19 @@ public class MainAhorcado : MonoBehaviour
         letraX.GetComponent<Button>().interactable = true;
         letraY.GetComponent<Button>().interactable = true;
         letraZ.GetComponent<Button>().interactable = true;
+
+        sacarPalabra();
     }
 
     public void clickSalir()
     {
         //Implementar monedas y barras de estado
 
+        int monedas = PlayerPrefs.GetInt("Coins");
+        monedas = monedas + (ganadas * 2);
+        PlayerPrefs.SetInt("Coins", monedas);
+
         SceneManager.LoadScene("Jardin");
     }
+
 }
