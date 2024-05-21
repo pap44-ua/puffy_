@@ -21,6 +21,7 @@ public class MainAhorcado : MonoBehaviour
 
     public AudioClip ganado, perdido;
     public AudioSource a;
+    private int jugadas;
 
     //Textos dinámicos
     public GameObject letrasUsadas, palabraAcertando;
@@ -68,6 +69,7 @@ public class MainAhorcado : MonoBehaviour
         sexto.SetActive(false);
         septimo.SetActive(false);
         ganadas = 0;
+        jugadas = 1;
         recuadroTeclado.SetActive(true);
         recuadroPalabra.SetActive(true);
         recuadroLetras.SetActive(true);
@@ -745,7 +747,7 @@ public class MainAhorcado : MonoBehaviour
         recuadroTeclado.SetActive(true);
         recuadroPalabra.SetActive(true);
         recuadroLetras.SetActive(true);
-
+        jugadas++;
         palabraElegida.ToUpper();
         letrasUsadas.SetActive(true);
         palabraAcertando.SetActive(true);
@@ -847,11 +849,21 @@ public class MainAhorcado : MonoBehaviour
 
     public void clickSalir()
     {
-        //Implementar monedas y barras de estado
-
         int monedas = PlayerPrefs.GetInt("Coins");
-        monedas = monedas + (ganadas * 2);
+        monedas += (ganadas * 10);
         PlayerPrefs.SetInt("Coins", monedas);
+
+        int diversion = PlayerPrefs.GetInt("Diversion");
+        int comida = PlayerPrefs.GetInt("Comida");
+        int energia = PlayerPrefs.GetInt("Energia");
+
+        diversion += (jugadas * 5);
+        comida -= (jugadas * 2);
+        energia -= (jugadas * 2);
+
+        PlayerPrefs.SetInt("Diversion", diversion);
+        PlayerPrefs.SetInt("Comida", comida);
+        PlayerPrefs.SetInt("Energia", energia);
 
         SceneManager.LoadScene("Jardin");
     }
