@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7911be167d06f42c0ab834d79a7fba93
+guid: c841e17bd563b45e7b9d824aa3656b10
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -152,20 +152,13 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Brazo Izquierdo: 493407990
-      Brazo derecho: -1540002198
-      Cuerpo: -1947892632
-      Oreja Derecha: -635490219
-      Oreja Izquierda: -1255822351
-      Pierna Izquierda: -303370201
-      Pierna derecha: 10661822
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

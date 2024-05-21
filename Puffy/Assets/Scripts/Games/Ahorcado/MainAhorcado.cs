@@ -12,7 +12,7 @@ public class MainAhorcado : MonoBehaviour
     public GameObject inicio, segundo, tercero, cuarto, quinto, sexto, septimo, octavo;
 
     //Recuadros
-    public GameObject recuadroTeclado;
+    public GameObject recuadroTeclado, recuadroPalabra, recuadroLetras;
 
     //Recuadro Final Partida
     public GameObject FinPartida, botonSalir, volverJugar, mensajeFinal;
@@ -40,6 +40,8 @@ public class MainAhorcado : MonoBehaviour
         septimo.SetActive(false);
         ganadas = 0;
         recuadroTeclado.SetActive(true);
+        recuadroPalabra.SetActive(true);
+        recuadroLetras.SetActive(true);
 
         palabraElegida.ToUpper();
         letrasUsadas.SetActive(true);
@@ -252,6 +254,7 @@ public class MainAhorcado : MonoBehaviour
             mensajeFinal.SetActive(true);
             palabraAcertando.SetActive(false);
             recuadroTeclado.SetActive(false);
+            recuadroPalabra.SetActive(false);
             ganadas++;
         }
     }
