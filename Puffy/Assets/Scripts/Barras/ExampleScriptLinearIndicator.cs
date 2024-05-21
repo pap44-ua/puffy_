@@ -80,15 +80,15 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
         }
 
         if(comida.GetValue() != PlayerPrefs.GetInt("Comida"))
-            PlayerPrefs.SetInt("Comida", (int) comida.GetValue());
+            comida.SetValue(PlayerPrefs.GetInt("Comida"));
         
         if (diversion.GetValue() != PlayerPrefs.GetInt("Diversion"))
-            PlayerPrefs.SetInt("Diversion", (int)diversion.GetValue());
-     
+            diversion.SetValue(PlayerPrefs.GetInt("Diversion"));
+
         if (salud.GetValue() != PlayerPrefs.GetInt("Salud"))
-            PlayerPrefs.SetInt("Salud", (int)salud.GetValue());
-        
+            salud.SetValue(PlayerPrefs.GetInt("Salud"));
+
         if (energia.GetValue() != PlayerPrefs.GetInt("Energia"))
-            PlayerPrefs.SetInt("Energia", (int)energia.GetValue());
+            energia.SetValue(PlayerPrefs.GetInt("Energia"));
     }
 }

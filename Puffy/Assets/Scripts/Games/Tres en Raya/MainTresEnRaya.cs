@@ -15,13 +15,14 @@ public class NewBehaviourScript : MonoBehaviour
     public AudioSource a;
     private int turno, ganador;
     private int enemigo;
-    private int ganadas; 
+    private int ganadas, jugadas; 
     // Start is called before the first frame update
     void Start()
     {
         ganadas = 0;
         turno = 1;
         ganador = 0;
+        jugadas = 1;
         enemigo = -1;
         BotonJugar.SetActive(false);
         BotonSalir.SetActive(false);
@@ -176,7 +177,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (Boton02.activeSelf)
         {
-            Jugador2_01.SetActive(true);
+            Jugador2_02.SetActive(true);
             Boton02.SetActive(false);
         }
         else if (Boton10.activeSelf)
@@ -393,6 +394,7 @@ public class NewBehaviourScript : MonoBehaviour
         turno = 1;
         ganador = 0;
         enemigo = -1;
+        jugadas++;
         BotonJugar.SetActive(false);
         BotonSalir.SetActive(false);
         FinJuego.SetActive(false);
@@ -436,8 +438,21 @@ public class NewBehaviourScript : MonoBehaviour
     public void botonSalir()
     {
         int monedas = PlayerPrefs.GetInt("Coins");
-        monedas += (ganadas * 2);
+        monedas += (ganadas * 10);
         PlayerPrefs.SetInt("Coins", monedas);
+
+        int diversion = PlayerPrefs.GetInt("Diversion");
+        int comida = PlayerPrefs.GetInt("Comida");
+        int energia = PlayerPrefs.GetInt("Energia");
+
+        diversion += (jugadas * 5);
+        comida -= (jugadas * 2);
+        energia -= (jugadas * 2);
+
+        PlayerPrefs.SetInt("Diversion", diversion);
+        PlayerPrefs.SetInt("Comida", comida);
+        PlayerPrefs.SetInt("Energia", energia);
+
         SceneManager.LoadScene("Jardin");
     }
 }
