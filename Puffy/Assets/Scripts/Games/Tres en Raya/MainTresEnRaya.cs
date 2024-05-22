@@ -11,15 +11,18 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject Jugador1_00, Jugador1_01, Jugador1_02, Jugador1_10, Jugador1_11, Jugador1_12, Jugador1_20, Jugador1_21, Jugador1_22;
     public GameObject Jugador2_00, Jugador2_01, Jugador2_02, Jugador2_10, Jugador2_11, Jugador2_12, Jugador2_20, Jugador2_21, Jugador2_22;
     public GameObject BotonJugar, BotonSalir, FinJuego, Jugador1, Jugador2, MensajeGanador, Inicio;
+    public AudioClip ganado, perdido;
+    public AudioSource a;
     private int turno, ganador;
     private int enemigo;
-    private double ganadas; 
+    private int ganadas, jugadas; 
     // Start is called before the first frame update
     void Start()
     {
         ganadas = 0;
         turno = 1;
         ganador = 0;
+        jugadas = 1;
         enemigo = -1;
         BotonJugar.SetActive(false);
         BotonSalir.SetActive(false);
@@ -75,6 +78,16 @@ public class NewBehaviourScript : MonoBehaviour
             BotonSalir.SetActive(true);
             BotonJugar.SetActive(true);
             MensajeGanador.SetActive(true);
+            if (enemigo == 1)
+            {
+                a.PlayOneShot(ganado);
+            }
+            else if (enemigo == 0 && ganador == 1)
+            {
+                a.PlayOneShot(ganado);
+            }
+            else
+                a.PlayOneShot(perdido);
         }
         if(enemigo == 0 && turno == 2)
         {
@@ -147,7 +160,6 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (ganador == 2)
                 ganadas++;
-            else ganadas += 0.5;
         }
     }
 
@@ -165,7 +177,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (Boton02.activeSelf)
         {
-            Jugador2_01.SetActive(true);
+            Jugador2_02.SetActive(true);
             Boton02.SetActive(false);
         }
         else if (Boton10.activeSelf)
@@ -382,6 +394,7 @@ public class NewBehaviourScript : MonoBehaviour
         turno = 1;
         ganador = 0;
         enemigo = -1;
+        jugadas++;
         BotonJugar.SetActive(false);
         BotonSalir.SetActive(false);
         FinJuego.SetActive(false);
@@ -424,6 +437,22 @@ public class NewBehaviourScript : MonoBehaviour
     
     public void botonSalir()
     {
+        int monedas = PlayerPrefs.GetInt("Coins");
+        monedas += (ganadas * 10);
+        PlayerPrefs.SetInt("Coins", monedas);
+
+        int diversion = PlayerPrefs.GetInt("Diversion");
+        int comida = PlayerPrefs.GetInt("Comida");
+        int energia = PlayerPrefs.GetInt("Energia");
+
+        diversion += (jugadas * 5);
+        comida -= (jugadas * 2);
+        energia -= (jugadas * 2);
+
+        PlayerPrefs.SetInt("Diversion", diversion);
+        PlayerPrefs.SetInt("Comida", comida);
+        PlayerPrefs.SetInt("Energia", energia);
+
         SceneManager.LoadScene("Jardin");
     }
 }

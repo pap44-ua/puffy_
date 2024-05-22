@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class ExampleScriptLinearIndicator : MonoBehaviour
 {
@@ -54,8 +55,33 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
         }
     }
 
+    private float obtenerResultado()
+    {
+        DateTime n = DateTime.Now;
+        float r = n.Day * 86400 + n.Hour * 3600 + n.Minute * 60 + n.Second;
+
+        return r;
+    }
+
     void FixedUpdate()
     {
+        if (!PlayerPrefs.HasKey("UltimaHora")){
+            DateTime n = DateTime.Now;
+            float r = n.Day * 86400 + n.Hour * 3600 + n.Minute * 60 + n.Second;
+            PlayerPrefs.SetFloat("UltimaHora", r);
+        }
+        else{
+            float antes = PlayerPrefs.GetFloat("UltimaHora");
+            float k = obtenerResultado() - antes;
+            if (k % 3600 >= 1)
+            {
+                PlayerPrefs.SetInt("Comida", PlayerPrefs.GetInt("Comida") - ((int)(k % 3600)) * 5);
+                PlayerPrefs.SetInt("Salud", PlayerPrefs.GetInt("Salud") - ((int)(k % 3600)) * 3);
+                PlayerPrefs.SetInt("Diversion", PlayerPrefs.GetInt("Diverison") - ((int)(k % 3600) * 10));
+                PlayerPrefs.SetInt("Energia", PlayerPrefs.GetInt("Energia") - ((int)(k % 3600)) * 5);
+                PlayerPrefs.SetFloat("UltimaHora", obtenerResultado());
+            }
+        }
 
         if(comida.GetValue()==0 && diversion.GetValue()==0 && salud.GetValue()==0 && energia.GetValue()==0)
         {
@@ -63,14 +89,14 @@ public class ExampleScriptLinearIndicator : MonoBehaviour
         }
 
         if(comida.GetValue() != PlayerPrefs.GetInt("Comida"))
-            PlayerPrefs.SetInt("Comida", (int) comida.GetValue());
+            PlayerPrefs.SetInt("Comida", (int)comida.GetValue());
         
         if (diversion.GetValue() != PlayerPrefs.GetInt("Diversion"))
             PlayerPrefs.SetInt("Diversion", (int)diversion.GetValue());
-     
+
         if (salud.GetValue() != PlayerPrefs.GetInt("Salud"))
             PlayerPrefs.SetInt("Salud", (int)salud.GetValue());
-        
+
         if (energia.GetValue() != PlayerPrefs.GetInt("Energia"))
             PlayerPrefs.SetInt("Energia", (int)energia.GetValue());
     }

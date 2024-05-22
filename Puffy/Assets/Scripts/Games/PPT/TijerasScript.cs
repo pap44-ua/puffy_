@@ -27,7 +27,11 @@ public class ElementoScript : MonoBehaviour
     public AudioClip victoriaClip;
     public AudioClip derrotaClip;
 
+    public int money;
 
+    void Start(){
+        money = PlayerPrefs.GetInt("Coins",0);
+    }
     void OnMouseDown()
     {
         if(gameObject == jugarButton){
@@ -132,7 +136,9 @@ public class ElementoScript : MonoBehaviour
 
         // Determinar el resultado
         if ((jugadorPiedra && maquinaTijeras) || (jugadorPapel && maquinaPiedra) || (jugadorTijeras && maquinaPapel))
-        {
+        {   
+            money = money + 10;
+            PlayerPrefs.SetInt("Coins", money);
             victoria.SetActive(true);
             audioSource.PlayOneShot(victoriaClip);
         }
