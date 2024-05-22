@@ -14,7 +14,7 @@ public class RestarMonedas : MonoBehaviour
     {
         // Intenta cargar el n�mero de monedas desde PlayerPrefs
         coins = PlayerPrefs.GetInt("Coins", initialCoins);
-        ResetCoins();
+        //ResetCoins();
         // Actualiza el texto del componente TextMeshPro con el valor inicial o cargado de las monedas
         UpdateCoinsText();
     }
