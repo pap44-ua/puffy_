@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsText: {fileID: 173851267}
-  initialCoins: 1500
+  initialCoins: 0
 --- !u!114 &173851270
 MonoBehaviour:
   m_ObjectHideFlags: 0
