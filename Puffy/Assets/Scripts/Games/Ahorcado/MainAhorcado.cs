@@ -268,7 +268,9 @@ public class MainAhorcado : MonoBehaviour
             volverJugar.SetActive(true);
             mensajeFinal.GetComponent<TextMeshProUGUI>().text = "No has conseguido acertar la palabra :(";
             mensajeFinal.SetActive(true);
+            palabraAcertando.SetActive(false);
             recuadroTeclado.SetActive(false);
+            recuadroPalabra.SetActive(false);
             a.PlayOneShot(perdido);
         }
     }
@@ -293,6 +295,7 @@ public class MainAhorcado : MonoBehaviour
             volverJugar.SetActive(true);
             botonSalir.GetComponent<Button>().interactable = true;
             volverJugar.GetComponent<Button>().interactable = true;
+            recuadroPalabra.SetActive(false);
             mensajeFinal.GetComponent<TextMeshProUGUI>().text = "¡Has conseguido acertar la palabra! :)";
             mensajeFinal.SetActive(true);
             palabraAcertando.SetActive(false);
@@ -763,8 +766,6 @@ public class MainAhorcado : MonoBehaviour
         FinPartida.SetActive(false);
         botonSalir.SetActive(false);
         volverJugar.SetActive(false);
-        botonSalir.GetComponent<Button>().interactable = false;
-        volverJugar.GetComponent<Button>().interactable = false;
         mensajeFinal.SetActive(false);
 
         letraA.SetActive(true);
