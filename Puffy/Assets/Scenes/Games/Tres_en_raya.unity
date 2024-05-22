@@ -988,8 +988,8 @@ Transform:
   m_GameObject: {fileID: 193460106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2063, y: -1.9849, z: -17.47}
-  m_LocalScale: {x: 3.4405577, y: 3.9478426, z: 1}
+  m_LocalPosition: {x: -0.2063, y: -2.16, z: -17.47}
+  m_LocalScale: {x: 0.75, y: 0.83, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 169718035}
@@ -1035,7 +1035,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: baf4d8f931cd7dc49b5f94a7a8e8f5fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2075,7 +2075,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: baf4d8f931cd7dc49b5f94a7a8e8f5fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2096,7 +2096,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.2, y: -2.02, z: -8.55}
-  m_LocalScale: {x: 4.02, y: 4.01, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.83, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1340555044}
@@ -4492,8 +4492,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4586,8 +4586,8 @@ Transform:
   m_GameObject: {fileID: 1068436699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: -0.59}
-  m_LocalScale: {x: 0.19, y: 0.19, z: 1}
+  m_LocalPosition: {x: 0, y: 1.37, z: -0.59}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507878264}
@@ -6028,8 +6028,8 @@ Transform:
   m_GameObject: {fileID: 1340555043}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: -0.59}
-  m_LocalScale: {x: 0.19, y: 0.19, z: 1}
+  m_LocalPosition: {x: 0, y: 1.37, z: -0.59}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507878264}
@@ -6408,7 +6408,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -6956,7 +6956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250.5, y: -542.44}
+  m_AnchoredPosition: {x: -213.72, y: -542.44}
   m_SizeDelta: {x: 449, y: 526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485028372
@@ -7359,7 +7359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250.5, y: -542.44}
+  m_AnchoredPosition: {x: 211.4, y: -542.44}
   m_SizeDelta: {x: 449, y: 526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597274116
@@ -8309,7 +8309,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -8691,8 +8691,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280821800
-  m_fontColor: {r: 0.15686275, g: 0.15686275, b: 0.15686275, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9562,8 +9562,8 @@ MonoBehaviour:
   Boton20: {fileID: 2032912112}
   Boton21: {fileID: 748844668}
   Boton22: {fileID: 1615858155}
-  BotonIA: {fileID: 0}
-  BotonHumano: {fileID: 0}
+  BotonIA: {fileID: 1627282302}
+  BotonHumano: {fileID: 359898915}
   Jugador1_00: {fileID: 1818062227}
   Jugador1_01: {fileID: 1872510287}
   Jugador1_02: {fileID: 2962793}
