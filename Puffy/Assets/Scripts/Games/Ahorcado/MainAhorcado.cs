@@ -27,29 +27,30 @@ public class MainAhorcado : MonoBehaviour
     public GameObject letrasUsadas, palabraAcertando;
 
     string[] palabras = {
-            "elefante", "jirafa", "computadora", "programacion", "auriculares",
-            "microfono", "bicicleta", "ventilador", "automovil", "astronauta",
-            "murcielago", "biblioteca", "refrigerador", "calculadora", "television",
-            "parlante", "escritorio", "ventana", "colegio", "universidad",
-            "examen", "diccionario", "bateria", "camara", "celular",
-            "videojuego", "aplicacion", "inteligencia", "artificial", "algoritmo",
-            "desarrollo", "software", "hardware", "procesador", "memoria",
-            "tarjeta", "madre", "enchufe", "cable", "conector",
-            "puerto", "servidor", "internet", "criptografia", "seguridad",
-            "contraseña", "acceso", "usuario", "administrador", "sistema",
-            "operativo", "windows", "linux", "android", "aplicacion",
-            "juego", "programa", "desarrollador", "ingeniero", "tecnico",
-            "analista", "consultor", "proyecto", "metodologia", "documentacion",
-            "requisito", "integracion", "implementacion", "despliegue", "mantenimiento",
-            "soporte", "actualizacion", "parche", "release", "arquitectura",
-            "framework", "biblioteca", "interfaz", "usuario", "backend",
-            "frontend", "desempeño", "optimización", "rendimiento", "simulación",
-            "virtualización", "criptomoneda", "blockchain", "transacción", "encriptación",
-            "decodificación", "análisis", "compilador", "interpretador", "ejecutable",
-            "secuencia", "concurrencia", "paralelismo", "asincronía", "sincronización",
-            "semaforo", "hilo", "proceso", "tarea", "buffer",
-            "memoria", "caché", "optimización", "compresión", "decompresión"
-        };
+        "elefante", "jirafa", "computadora", "programacion", "auriculares",
+        "microfono", "bicicleta", "ventilador", "automovil", "astronauta",
+        "murcielago", "biblioteca", "refrigerador", "calculadora", "television",
+        "parlante", "escritorio", "ventana", "colegio", "universidad",
+        "examen", "diccionario", "bateria", "camara", "celular",
+        "videojuego", "aplicacion", "inteligencia", "artificial", "algoritmo",
+        "desarrollo", "software", "hardware", "procesador", "memoria",
+        "tarjeta", "madre", "enchufe", "cable", "conector",
+        "puerto", "servidor", "internet", "criptografia", "seguridad",
+        "contrasena", "acceso", "usuario", "administrador", "sistema",
+        "operativo", "windows", "linux", "android", "aplicacion",
+        "juego", "programa", "desarrollador", "ingeniero", "tecnico",
+        "analista", "consultor", "proyecto", "metodologia", "documentacion",
+        "requisito", "integracion", "implementacion", "despliegue", "mantenimiento",
+        "soporte", "actualizacion", "parche", "release", "arquitectura",
+        "framework", "biblioteca", "interfaz", "usuario", "backend",
+        "frontend", "desempeno", "optimizacion", "rendimiento", "simulacion",
+        "virtualizacion", "criptomoneda", "blockchain", "transaccion", "encriptacion",
+        "decodificacion", "analisis", "compilador", "interpretador", "ejecutable",
+        "secuencia", "concurrencia", "paralelismo", "asincronia", "sincronizacion",
+        "semaforo", "hilo", "proceso", "tarea", "buffer",
+        "memoria", "cache", "optimizacion", "compresion", "decompresion"
+    };
+
     private string palabraElegida = "hola esto es una prueba";
 
     private int ganadas;
@@ -290,6 +291,8 @@ public class MainAhorcado : MonoBehaviour
             FinPartida.SetActive(true);
             botonSalir.SetActive(true);
             volverJugar.SetActive(true);
+            botonSalir.GetComponent<Button>().interactable = true;
+            volverJugar.GetComponent<Button>().interactable = true;
             mensajeFinal.GetComponent<TextMeshProUGUI>().text = "¡Has conseguido acertar la palabra! :)";
             mensajeFinal.SetActive(true);
             palabraAcertando.SetActive(false);
@@ -744,10 +747,12 @@ public class MainAhorcado : MonoBehaviour
         quinto.SetActive(false);
         sexto.SetActive(false);
         septimo.SetActive(false);
+        ganadas = 0;
+        jugadas++;
         recuadroTeclado.SetActive(true);
         recuadroPalabra.SetActive(true);
         recuadroLetras.SetActive(true);
-        jugadas++;
+
         palabraElegida.ToUpper();
         letrasUsadas.SetActive(true);
         palabraAcertando.SetActive(true);
@@ -758,6 +763,8 @@ public class MainAhorcado : MonoBehaviour
         FinPartida.SetActive(false);
         botonSalir.SetActive(false);
         volverJugar.SetActive(false);
+        botonSalir.GetComponent<Button>().interactable = false;
+        volverJugar.GetComponent<Button>().interactable = false;
         mensajeFinal.SetActive(false);
 
         letraA.SetActive(true);
@@ -866,128 +873,5 @@ public class MainAhorcado : MonoBehaviour
         PlayerPrefs.SetInt("Energia", energia);
 
         SceneManager.LoadScene("Jardin");
-    }
-
-    void OnMouseDown()
-    {
-        if(gameObject == botonSalir)
-        {
-            int monedas = PlayerPrefs.GetInt("Coins");
-            monedas = monedas + (ganadas * 2);
-            PlayerPrefs.SetInt("Coins", monedas);
-
-            SceneManager.LoadScene("Jardin");
-        }
-        if(gameObject == volverJugar)
-        {
-            inicio.SetActive(true);
-            segundo.SetActive(false);
-            tercero.SetActive(false);
-            cuarto.SetActive(false);
-            quinto.SetActive(false);
-            sexto.SetActive(false);
-            septimo.SetActive(false);
-            recuadroTeclado.SetActive(true);
-            recuadroPalabra.SetActive(true);
-            recuadroLetras.SetActive(true);
-
-            palabraElegida.ToUpper();
-            letrasUsadas.SetActive(true);
-            palabraAcertando.SetActive(true);
-            System.Console.WriteLine(letrasUsadas.GetComponents<Component>());
-            letrasUsadas.GetComponent<TextMeshProUGUI>().text = "";
-            palabraAcertando.GetComponent<TextMeshProUGUI>().text = "";
-
-            FinPartida.SetActive(false);
-            botonSalir.SetActive(false);
-            volverJugar.SetActive(false);
-            mensajeFinal.SetActive(false);
-
-            letraA.SetActive(true);
-            letraA.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraA.GetComponent<Button>().interactable = true;
-            letraB.SetActive(true);
-            letraB.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraC.SetActive(true);
-            letraC.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraD.SetActive(true);
-            letraD.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraE.SetActive(true);
-            letraE.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraF.SetActive(true);
-            letraF.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraG.SetActive(true);
-            letraG.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraH.SetActive(true);
-            letraH.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraI.SetActive(true);
-            letraI.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraJ.SetActive(true);
-            letraJ.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraK.SetActive(true);
-            letraK.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraL.SetActive(true);
-            letraL.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraM.SetActive(true);
-            letraM.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraN.SetActive(true);
-            letraN.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraNN.SetActive(true);
-            letraNN.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraO.SetActive(true);
-            letraO.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraP.SetActive(true);
-            letraP.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraQ.SetActive(true);
-            letraQ.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraR.SetActive(true);
-            letraR.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraS.SetActive(true);
-            letraS.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraT.SetActive(true);
-            letraT.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraU.SetActive(true);
-            letraU.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraV.SetActive(true);
-            letraV.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraW.SetActive(true);
-            letraW.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraX.SetActive(true);
-            letraX.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraY.SetActive(true);
-            letraY.GetComponent<Image>().color = new Color(255, 255, 255);
-            letraZ.SetActive(true);
-            letraZ.GetComponent<Image>().color = new Color(255, 255, 255);
-
-            letraA.GetComponent<Button>().interactable = true;
-            letraB.GetComponent<Button>().interactable = true;
-            letraC.GetComponent<Button>().interactable = true;
-            letraD.GetComponent<Button>().interactable = true;
-            letraE.GetComponent<Button>().interactable = true;
-            letraF.GetComponent<Button>().interactable = true;
-            letraG.GetComponent<Button>().interactable = true;
-            letraH.GetComponent<Button>().interactable = true;
-            letraI.GetComponent<Button>().interactable = true;
-            letraJ.GetComponent<Button>().interactable = true;
-            letraK.GetComponent<Button>().interactable = true;
-            letraL.GetComponent<Button>().interactable = true;
-            letraM.GetComponent<Button>().interactable = true;
-            letraN.GetComponent<Button>().interactable = true;
-            letraNN.GetComponent<Button>().interactable = true;
-            letraO.GetComponent<Button>().interactable = true;
-            letraP.GetComponent<Button>().interactable = true;
-            letraQ.GetComponent<Button>().interactable = true;
-            letraR.GetComponent<Button>().interactable = true;
-            letraS.GetComponent<Button>().interactable = true;
-            letraT.GetComponent<Button>().interactable = true;
-            letraU.GetComponent<Button>().interactable = true;
-            letraV.GetComponent<Button>().interactable = true;
-            letraW.GetComponent<Button>().interactable = true;
-            letraX.GetComponent<Button>().interactable = true;
-            letraY.GetComponent<Button>().interactable = true;
-            letraZ.GetComponent<Button>().interactable = true;
-
-            sacarPalabra();
-        }
     }
 }

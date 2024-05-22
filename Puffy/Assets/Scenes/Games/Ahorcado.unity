@@ -4911,8 +4911,8 @@ Transform:
   m_GameObject: {fileID: 744159473}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: -2.34, z: -0.029521981}
-  m_LocalScale: {x: 3.7199998, y: 2.19, z: 1}
+  m_LocalPosition: {x: -0.12, y: -2.15, z: -0.029521981}
+  m_LocalScale: {x: 0.79, y: 0.54, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1291770684}
@@ -4959,7 +4959,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: baf4d8f931cd7dc49b5f94a7a8e8f5fe, type: 3}
   m_Color: {r: 0.1764706, g: 0.1764706, b: 0.1764706, a: 0.7647059}
   m_FlipX: 0
   m_FlipY: 0
@@ -7713,6 +7713,7 @@ GameObject:
   - component: {fileID: 1222098727}
   - component: {fileID: 1222098730}
   - component: {fileID: 1222098728}
+  - component: {fileID: 1222098731}
   m_Layer: 0
   m_Name: jugarButton
   m_TagString: Untagged
@@ -7729,7 +7730,7 @@ Transform:
   m_GameObject: {fileID: 1222098726}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -584, y: -1267.56, z: 0}
+  m_LocalPosition: {x: -584.12, y: -1267.56, z: 0}
   m_LocalScale: {x: 0.2975, y: 0.29750004, z: 1.19}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7832,6 +7833,62 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1222098731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222098726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 578607418}
+        m_TargetAssemblyTypeName: MainAhorcado, Assembly-CSharp
+        m_MethodName: clickVolverAJugar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1230388162
 GameObject:
   m_ObjectHideFlags: 0
@@ -8480,7 +8537,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: baf4d8f931cd7dc49b5f94a7a8e8f5fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8500,8 +8557,8 @@ Transform:
   m_GameObject: {fileID: 1313818755}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11994091, y: -0.33, z: -0.34}
-  m_LocalScale: {x: 3.61, y: 4.07, z: 1}
+  m_LocalPosition: {x: 0.03, y: -0.27, z: -0.34}
+  m_LocalScale: {x: 0.79, y: 0.73, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1477602907}
@@ -12583,6 +12640,7 @@ GameObject:
   - component: {fileID: 1919842930}
   - component: {fileID: 1919842933}
   - component: {fileID: 1919842931}
+  - component: {fileID: 1919842934}
   m_Layer: 0
   m_Name: atrasButton
   m_TagString: Untagged
@@ -12599,7 +12657,7 @@ Transform:
   m_GameObject: {fileID: 1919842929}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -585.7, y: -1267.56, z: 0}
+  m_LocalPosition: {x: -585.95, y: -1267.56, z: 0}
   m_LocalScale: {x: 0.2975, y: 0.2975, z: 0.2975}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12702,6 +12760,62 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1919842934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919842929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 578607418}
+        m_TargetAssemblyTypeName: MainAhorcado, Assembly-CSharp
+        m_MethodName: clickSalir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1928324555
 GameObject:
   m_ObjectHideFlags: 0
@@ -13622,8 +13736,8 @@ Transform:
   m_GameObject: {fileID: 2100034334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.94, y: 1.03, z: -0.029521981}
-  m_LocalScale: {x: 1.96, y: 1.96, z: 1}
+  m_LocalPosition: {x: 0.97, y: 1.03, z: -0.029521981}
+  m_LocalScale: {x: 0.43, y: 0.39, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 692571695}
@@ -13670,7 +13784,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: baf4d8f931cd7dc49b5f94a7a8e8f5fe, type: 3}
   m_Color: {r: 0.1764706, g: 0.1764706, b: 0.1764706, a: 0.7647059}
   m_FlipX: 0
   m_FlipY: 0
