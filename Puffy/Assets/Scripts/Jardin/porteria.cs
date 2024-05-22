@@ -27,7 +27,7 @@ public class porteria : MonoBehaviour
         }
     }
 
-    void update()
+    void Update()
     {
 
         PlayerPrefs.SetInt("Coins", coins);
