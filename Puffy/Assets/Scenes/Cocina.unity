@@ -204,7 +204,8 @@ Transform:
   m_LocalPosition: {x: 0.27, y: -4.4799, z: 11}
   m_LocalScale: {x: 16.01016, y: 1.306951, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1273377879}
   m_Father: {fileID: 138445527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &41368012
@@ -4976,7 +4977,7 @@ Transform:
   m_GameObject: {fileID: 984960140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -0.58, z: 0}
+  m_LocalPosition: {x: 0.13, y: 0.07, z: 0}
   m_LocalScale: {x: 0.22734953, y: 0.22734953, z: 0.22734953}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5108,6 +5109,10 @@ MonoBehaviour:
   minValue: 0
   maxValue: 0
   currentValue: 0
+  valComida: 0
+  valEnergia: 0
+  valSalud: 0
+  valDiversion: 0
 --- !u!114 &996236014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6548,12 +6553,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273377874}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5723, y: -3.88, z: 0}
-  m_LocalScale: {x: 0.084215306, y: 0.078338616, z: 1.2067}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.11187, y: 0.1993, z: -1}
+  m_LocalScale: {x: 0.0058571887, y: 0.07269163, z: 1.2067}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 14735590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1302851200
 GameObject:
@@ -10205,7 +10210,7 @@ Transform:
   m_GameObject: {fileID: 2045527138}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.66, y: -3.92, z: 0}
+  m_LocalPosition: {x: 1.59, y: -4.26, z: 0}
   m_LocalScale: {x: 1.1294, y: 1.1294, z: 1.1294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10671,7 +10676,6 @@ SceneRoots:
   - {fileID: 412439466}
   - {fileID: 78013761}
   - {fileID: 1837728442}
-  - {fileID: 1273377879}
   - {fileID: 318343851}
   - {fileID: 1761790470}
   - {fileID: 1004095279}
