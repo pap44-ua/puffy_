@@ -1,4 +1,4 @@
-# puffy
+# Puffy
 
 Puffy es un juego para movil implementado en unity. 
 
